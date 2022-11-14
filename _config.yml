@@ -3,8 +3,8 @@
 # -----------------------------------------------------------------------------
 
 title: blank # the website title (if blank, full name will be used instead)
-first_name: Augustine
-middle_name: (Augustinos) D.
+first_name: Augustinos
+middle_name: (Augustine)
 last_name: Saravanos
 email: you@example.com
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
