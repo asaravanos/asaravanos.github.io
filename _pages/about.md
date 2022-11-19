@@ -20,6 +20,6 @@ My research focuses on developing <b> distributed optimization-based methods </b
 
 See my
 <b>
-    <a href="{{ site.resume_path | prepend: 'https://asaravanos.github.io/assets/pdf/' }}" target="_blank">full CV</a>
+    <a href="{{ 'https://asaravanos.github.io/assets/pdf/Augustinos_CV.pdf' }}" target="_blank">full CV</a>
 </b>
 here.
