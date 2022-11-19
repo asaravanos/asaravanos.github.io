@@ -14,8 +14,12 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: false  # includes social icons at the bottom of the page
 ---
 
-I'm a third year PhD in Machine Learning student at Georgia Tech advised by Prof. Evangelos Theodorou.
+I'm a third year PhD in Machine Learning student at Georgia Tech advised by <a href="https://ae.gatech.edu/people/evangelos-theodorou" target="_blank"> Prof. Evangelos Theodorou </a>.
 
 My research focuses on developing <b> distributed optimization-based methods </b> that are scalable for the control of large-scale multi-agent systems.
 
-TODO: Finish bio.
+See my
+<b>
+    <a href="{{ site.resume_path | prepend: 'https://asaravanos.github.io/assets/pdf/' }}" target="_blank">full CV</a>
+</b>
+here.
