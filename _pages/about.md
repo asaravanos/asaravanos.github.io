@@ -14,9 +14,15 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: false  # includes social icons at the bottom of the page
 ---
 
-I'm a third year PhD in Machine Learning student at Georgia Tech advised by <a href="https://ae.gatech.edu/people/evangelos-theodorou" target="_blank"> Prof. Evangelos Theodorou </a>.
+I'm a third year PhD in Machine Learning student at Georgia Tech advised by <a href="https://ae.gatech.edu/people/evangelos-theodorou" target="_blank"> Prof. Evangelos Theodorou</a>.
 
-My research focuses on developing <b> distributed optimization-based methods </b> that are scalable for the control of large-scale multi-agent systems.
+My research focuses on developing <b> distributed methods </b> for the control of <b> large-scale multi-agent systems </b>. In particular, drawing tools
+from the areas of distributed optimization, stochastic optimal control and machine learning, my work aims in developing scalable and 
+computationally efficient algorithms for controlling large-scale multi-robot teams. 
+
+Prior to Georgia Tech, I graduated (top 1%) with a Diploma in ECE from the University of Patras in Greece, and was fortunate to be advised
+by <a href="https://nereus.mech.ntua.gr/" target="_blank"> Prof. Evangelos Papadopoulos</a>.
+
 
 See my
 <b>
