@@ -33,7 +33,7 @@ and
 <a href="http://www.roboticsproceedings.org/rss17/p075.html"> [Paper (RSS '21) </a>, <a href="https://www.youtube.com/watch?v=RiLQ2P1WXHQ"> Video]</a>.
 
 Prior to Georgia Tech, I graduated (top 1%) with a Diploma in Electrical and Computer Engineering from the University of Patras in Greece, and was advised
-by <a href="https://nereus.mech.ntua.gr/" target="_blank"> Prof. Evangelos Papadopoulos</a> and Prof. <a href="http://www.ece.upatras.gr/index.php/en/ece-faculty/koussoulas-nick.html" target="_blank"> Prof. Nick Koussoulas</a>.
+by <a href="https://nereus.mech.ntua.gr/" target="_blank"> Prof. Evangelos Papadopoulos</a> and <a href="http://www.ece.upatras.gr/index.php/en/ece-faculty/koussoulas-nick.html" target="_blank"> Prof. Nick Koussoulas</a>.
 
 
 See my
