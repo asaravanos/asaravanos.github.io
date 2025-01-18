@@ -7,5 +7,5 @@ html {
 }
 
 #selected-publications {
-    scroll-margin-top: 56px; /* Adjust for fixed navbar height */
+    scroll-margin-top: 256px; /* Adjust for fixed navbar height */
 }
