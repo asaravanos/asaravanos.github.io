@@ -43,8 +43,98 @@
       </p>
 
   <h4 class="text-left">Preprints / Under Review</h4>
+      <ol class="bibliography">
+        <li>
+          <div>
+            <div class="col-sm-2 abbr"><abbr class="badge" style="width: 120px;"> Preprint </abbr></div>
+            <div id="abdul2024robust">
+              <div class="title"><font size="+1">Scaling Robust Optimization for Multi-Agent Robotic
+                Systems: A Distributed Perspective</font></div>
+              <div class="author"> A.T. Abdul*, <strong> <font color="#3B57D3"> A.D. Saravanos*</font>
+              </strong> and E.A. Theodorou
+              </div>
+              <div class="periodical"><em> <font color="#104393"> Preprint (Under review) </font>
+              </em>, 2024
+              </div>
+              <div class="links"><a class="abstract btn btn-sm z-depth-0" role="button">Abstract</a>
+                <a href="https://arxiv.org/abs/2402.16227" class="btn btn-sm z-depth-0"
+                   role="button" target="_blank" rel="noopener noreferrer">PDF</a> <a
+                        href="https://www.youtube.com/watch?v=yrDwPwg4WFI"
+                        class="btn btn-sm z-depth-0" role="button" target="_blank"
+                        rel="noopener noreferrer">Video</a></div>
+              <div class="abstract hidden"><p>This paper presents a novel distributed robust
+                optimization scheme for steering distributions of multi-agent systems under
+                stochastic and deterministic uncertainty. Robust optimization is a subfield of
+                optimization which aims in discovering an optimal solution that remains robustly
+                feasible for all possible realizations of the problem parameters within a given
+                uncertainty set. Such approaches would naturally constitute an ideal candidate for
+                multi-robot control, where in addition to stochastic noise, there might be exogenous
+                deterministic disturbances. Nevertheless, as these methods are usually associated
+                with significantly high computational demands, their application to multi-agent
+                robotics has remained limited. The scope of this work is to propose a scalable
+                robust optimization framework that effectively addresses both types of
+                uncertainties, while retaining computational efficiency and scalability. In this
+                direction, we provide tractable approximations for robust constraints that relevant
+                in multi-robot settings. Subsequently, we demonstrate how computations can be
+                distributed through an Alternating Direction Method of Multipliers (ADMM) approach
+                towards achieving scalability and communication efficiency. Simulation results
+                highlight the performance of the proposed algorithm in effectively handling both
+                stochastic and deterministic uncertainty in multi-robot systems. The scalability of
+                the method is also emphasized by showcasing tasks with up to 100 agents. The results
+                of this work indicate the promise of blending robust optimization, distribution
+                steering and distributed optimization towards achieving scalable, safe and robust
+                multi-robot control.</p></div>
+            </div>
+          </div>
+        </li>
+      </ol>
 
   <h4 class="text-left">Journal Papers</h4>
+      <ol class="bibliography">
+        <li>
+          <div>
+            <div class="col-sm-2 abbr"><abbr class="badge" style="width: 120px;">IEEE Transactions <br>
+              on Robotics </abbr></div>
+            <div id="saravanos2022distributed_ddp">
+              <div class="title"><font size="+1">Distributed Differential Dynamic Programming
+                Architectures for Large-Scale Multi-Agent Control</font></div>
+              <div class="author"><strong> <font color="#3B57D3"> A.D. Saravanos</font> </strong>, Y.
+                Aoyama, H. Zhu, and E. A. Theodorou
+              </div>
+              <div class="periodical"><em> <font color="#104393">IEEE Transactions on Robotics </font>
+              </em>, 2023. <font color="#C23E0A"> [Acceptance rate: ~18%] </font></div>
+              <div class="links"><a class="abstract btn btn-sm z-depth-0" role="button">Abstract</a>
+                <a href="https://arxiv.org/abs/2207.13255" class="btn btn-sm z-depth-0"
+                   role="button" target="_blank" rel="noopener noreferrer">PDF</a> <a
+                        href="https://www.youtube.com/watch?v=tluvENcWldw"
+                        class="btn btn-sm z-depth-0" role="button" target="_blank"
+                        rel="noopener noreferrer">Video</a></div>
+              <div class="abstract hidden"><p>In this paper, we propose two novel decentralized
+                optimization frameworks for multi-agent nonlinear optimal control problems in
+                robotics. The aim of this work is to suggest architectures that inherit the
+                computational efficiency and scalability of Differential Dynamic Programming (DDP)
+                and the distributed nature of the Alternating Direction Method of Multipliers
+                (ADMM). In this direction, two frameworks are introduced. The first one called
+                Nested Distributed DDP (ND-DDP), is a three-level architecture which employs ADMM
+                for enforcing a consensus between all agents, an Augmented Lagrangian layer for
+                satisfying local constraints and DDP as each agent’s optimizer. In the second
+                approach, both consensus and local constraints are handled with ADMM, yielding a
+                two-level architecture called Merged Distributed DDP (MD-DDP), which further reduces
+                computational complexity. Both frameworks are fully decentralized since all
+                computations are parallelizable among the agents and only local communication is
+                necessary. Simulation results that scale up to thousands of vehicles and hundreds of
+                drones verify the effectiveness of the methods. Superior scalability to large-scale
+                systems against centralized DDP and centralized/decentralized sequential quadratic
+                programming is also illustrated. Finally, hardware experiments on a multi-robot
+                platform demonstrate the applicability of the proposed algorithms, while
+                highlighting the importance of optimizing for feedback policies to increase
+                robustness against uncertainty. <a href="https://youtu.be/tluvENcWldw"
+                                                   target="_blank" rel="noopener noreferrer">A video
+                  with all results is available here</a>.</p></div>
+            </div>
+          </div>
+        </li>
+      </ol>
 
   <h4 class="text-left">Conference Papers</h4>
       
@@ -93,50 +183,6 @@
 
         <li>
           <div>
-            <div class="col-sm-2 abbr"><abbr class="badge" style="width: 120px;"> Preprint </abbr></div>
-            <div id="abdul2024robust">
-              <div class="title"><font size="+1">Scaling Robust Optimization for Multi-Agent Robotic
-                Systems: A Distributed Perspective</font></div>
-              <div class="author"> A.T. Abdul*, <strong> <font color="#3B57D3"> A.D. Saravanos*</font>
-              </strong> and E.A. Theodorou
-              </div>
-              <div class="periodical"><em> <font color="#104393"> Preprint (Under review) </font>
-              </em>, 2024
-              </div>
-              <div class="links"><a class="abstract btn btn-sm z-depth-0" role="button">Abstract</a>
-                <a href="https://arxiv.org/abs/2402.16227" class="btn btn-sm z-depth-0"
-                   role="button" target="_blank" rel="noopener noreferrer">PDF</a> <a
-                        href="https://www.youtube.com/watch?v=yrDwPwg4WFI"
-                        class="btn btn-sm z-depth-0" role="button" target="_blank"
-                        rel="noopener noreferrer">Video</a></div>
-              <div class="abstract hidden"><p>This paper presents a novel distributed robust
-                optimization scheme for steering distributions of multi-agent systems under
-                stochastic and deterministic uncertainty. Robust optimization is a subfield of
-                optimization which aims in discovering an optimal solution that remains robustly
-                feasible for all possible realizations of the problem parameters within a given
-                uncertainty set. Such approaches would naturally constitute an ideal candidate for
-                multi-robot control, where in addition to stochastic noise, there might be exogenous
-                deterministic disturbances. Nevertheless, as these methods are usually associated
-                with significantly high computational demands, their application to multi-agent
-                robotics has remained limited. The scope of this work is to propose a scalable
-                robust optimization framework that effectively addresses both types of
-                uncertainties, while retaining computational efficiency and scalability. In this
-                direction, we provide tractable approximations for robust constraints that relevant
-                in multi-robot settings. Subsequently, we demonstrate how computations can be
-                distributed through an Alternating Direction Method of Multipliers (ADMM) approach
-                towards achieving scalability and communication efficiency. Simulation results
-                highlight the performance of the proposed algorithm in effectively handling both
-                stochastic and deterministic uncertainty in multi-robot systems. The scalability of
-                the method is also emphasized by showcasing tasks with up to 100 agents. The results
-                of this work indicate the promise of blending robust optimization, distribution
-                steering and distributed optimization towards achieving scalable, safe and robust
-                multi-robot control.</p></div>
-            </div>
-          </div>
-        </li>
-
-        <li>
-          <div>
             <div class="col-sm-2 abbr"><abbr class="badge" style="width: 120px;">IROS 2024 </abbr></div>
             <div id="saravanos2022distributed_mpcs">
               <div class="title"><font size="+1">Distributed Model Predictive Covariance
@@ -170,50 +216,6 @@
                 effectiveness and scalability of DMPCS. Its superior capability in achieving safety
                 is also highlighted through a comparison against a standard stochastic MPC
                 approach.</p></div>
-            </div>
-          </div>
-        </li>
-
-        <li>
-          <div>
-            <div class="col-sm-2 abbr"><abbr class="badge" style="width: 120px;">IEEE Transactions <br>
-              on Robotics </abbr></div>
-            <div id="saravanos2022distributed_ddp">
-              <div class="title"><font size="+1">Distributed Differential Dynamic Programming
-                Architectures for Large-Scale Multi-Agent Control</font></div>
-              <div class="author"><strong> <font color="#3B57D3"> A.D. Saravanos</font> </strong>, Y.
-                Aoyama, H. Zhu, and E. A. Theodorou
-              </div>
-              <div class="periodical"><em> <font color="#104393">IEEE Transactions on Robotics </font>
-              </em>, 2023. <font color="#C23E0A"> [Acceptance rate: ~18%] </font></div>
-              <div class="links"><a class="abstract btn btn-sm z-depth-0" role="button">Abstract</a>
-                <a href="https://arxiv.org/abs/2207.13255" class="btn btn-sm z-depth-0"
-                   role="button" target="_blank" rel="noopener noreferrer">PDF</a> <a
-                        href="https://www.youtube.com/watch?v=tluvENcWldw"
-                        class="btn btn-sm z-depth-0" role="button" target="_blank"
-                        rel="noopener noreferrer">Video</a></div>
-              <div class="abstract hidden"><p>In this paper, we propose two novel decentralized
-                optimization frameworks for multi-agent nonlinear optimal control problems in
-                robotics. The aim of this work is to suggest architectures that inherit the
-                computational efficiency and scalability of Differential Dynamic Programming (DDP)
-                and the distributed nature of the Alternating Direction Method of Multipliers
-                (ADMM). In this direction, two frameworks are introduced. The first one called
-                Nested Distributed DDP (ND-DDP), is a three-level architecture which employs ADMM
-                for enforcing a consensus between all agents, an Augmented Lagrangian layer for
-                satisfying local constraints and DDP as each agent’s optimizer. In the second
-                approach, both consensus and local constraints are handled with ADMM, yielding a
-                two-level architecture called Merged Distributed DDP (MD-DDP), which further reduces
-                computational complexity. Both frameworks are fully decentralized since all
-                computations are parallelizable among the agents and only local communication is
-                necessary. Simulation results that scale up to thousands of vehicles and hundreds of
-                drones verify the effectiveness of the methods. Superior scalability to large-scale
-                systems against centralized DDP and centralized/decentralized sequential quadratic
-                programming is also illustrated. Finally, hardware experiments on a multi-robot
-                platform demonstrate the applicability of the proposed algorithms, while
-                highlighting the importance of optimizing for feedback policies to increase
-                robustness against uncertainty. <a href="https://youtu.be/tluvENcWldw"
-                                                   target="_blank" rel="noopener noreferrer">A video
-                  with all results is available here</a>.</p></div>
             </div>
           </div>
         </li>
