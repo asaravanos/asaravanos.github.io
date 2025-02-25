@@ -399,8 +399,7 @@
                 Control using Deep FBSDEs and ADMM</font></div>
               <div class="author"> M.A. Pereira*, <strong><font color="#A0522D">A.D. Saravanos*</font></strong>, O. So, and E.A. Theodorou
               </div>
-              <div class="periodical"><strong><font color="#3B57D3">Robotics: Science and Systems (RSS)</font>
-              </strong>, 2022.</div>
+              <div class="periodical"><strong><font color="#3B57D3">Robotics: Science and Systems (RSS)</font></strong>, 2022.</div>
               <div class="links"><a class="abstract btn btn-sm z-depth-0" role="button">Abstract</a>
                 <a href="http://www.roboticsproceedings.org/rss18/p055.html"
                    class="btn btn-sm z-depth-0" role="button" target="_blank"
@@ -438,8 +437,7 @@
               <div class="title"><font size="+1">Receding Horizon Differential Dynamic Programming Under Parametric Uncertainty</font></div>
               <div class="author"> Y. Aoyama, <strong><font color="#A0522D">A.D. Saravanos</font></strong>, and E.A. Theodorou
               </div>
-              <div class="periodical"><strong><font color="#3B57D3">IEEE Conference on Decision and Control (CDC)</font>
-              </strong> , 2021.</div>
+              <div class="periodical"><strong><font color="#3B57D3">IEEE Conference on Decision and Control (CDC)</font></strong>, 2021.</div>
               <div class="links"><a class="abstract btn btn-sm z-depth-0" role="button">Abstract</a>
                 <a href="https://ieeexplore.ieee.org/abstract/document/9683370"
                    class="btn btn-sm z-depth-0" role="button" target="_blank"
@@ -466,8 +464,7 @@
               <div class="author"><strong><font color="#A0522D">A.D. Saravanos</font></strong>, A.
                 Tsolovikos, E. Bakolas, and E.A. Theodorou
               </div>
-              <div class="periodical"><strong><font color="#3B57D3">Robotics: Science and Systems (RSS)</font>
-              </strong> , 2021.</div>
+              <div class="periodical"><strong><font color="#3B57D3">Robotics: Science and Systems (RSS)</font></strong>, 2021.</div>
               <div class="links"><a class="abstract btn btn-sm z-depth-0" role="button">Abstract</a>
                 <a href="http://www.roboticsproceedings.org/rss17/p075.html"
                    class="btn btn-sm z-depth-0" role="button" target="_blank"
@@ -502,40 +499,25 @@
           <div>
             <div class="col-sm-2 abbr"><abbr class="badge" style="width: 120px;"> Preprint </abbr></div>
             <div id="abdul2024robust">
-              <div class="title"><font size="+1">Scaling Robust Optimization for Multi-Agent Robotic
-                Systems: A Distributed Perspective</font></div>
-              <div class="author"> A.T. Abdul*, <strong><font color="#A0522D">A.D. Saravanos*</font></strong> and E.A. Theodorou
+              <div class="title"><font size="+1">Sim2Real on the Robotarium Platform Using Decentralized Multi-Agent Safe Deep FBSDEs</font></div>
+              <div class="author"> M.A. Pereira*, <strong><font color="#A0522D">A.D. Saravanos*</font></strong> and E.A. Theodorou
               </div>
-              <div class="periodical"><font color="#3B57D3">Preprint (Under review)</font>, 2025.
+              <div class="periodical"><strong><font color="#3B57D3">Robotics: Science and Systems (RSS), Workshop on Scaling Robot Learning</font></strong>, 2022.
               </div>
               <div class="links"><a class="abstract btn btn-sm z-depth-0" role="button">Abstract</a>
-                <a href="https://arxiv.org/abs/2402.16227" class="btn btn-sm z-depth-0"
+                <a href="https://drive.google.com/file/d/1o5BmSE1nQELEX8MEWFxIHtn_usvRGF8G/view" class="btn btn-sm z-depth-0"
                    role="button" target="_blank" rel="noopener noreferrer">PDF</a> <a
                         href="https://www.youtube.com/watch?v=Q5xghaqt4SQ"
                         class="btn btn-sm z-depth-0" role="button" target="_blank"
                         rel="noopener noreferrer">Video</a></div>
-              <div class="abstract hidden"><p>This paper presents a novel distributed robust
-                optimization scheme for steering distributions of multi-agent systems under
-                stochastic and deterministic uncertainty. Robust optimization is a subfield of
-                optimization which aims in discovering an optimal solution that remains robustly
-                feasible for all possible realizations of the problem parameters within a given
-                uncertainty set. Such approaches would naturally constitute an ideal candidate for
-                multi-robot control, where in addition to stochastic noise, there might be exogenous
-                deterministic disturbances. Nevertheless, as these methods are usually associated
-                with significantly high computational demands, their application to multi-agent
-                robotics has remained limited. The scope of this work is to propose a scalable
-                robust optimization framework that effectively addresses both types of
-                uncertainties, while retaining computational efficiency and scalability. In this
-                direction, we provide tractable approximations for robust constraints that relevant
-                in multi-robot settings. Subsequently, we demonstrate how computations can be
-                distributed through an Alternating Direction Method of Multipliers (ADMM) approach
-                towards achieving scalability and communication efficiency. Simulation results
-                highlight the performance of the proposed algorithm in effectively handling both
-                stochastic and deterministic uncertainty in multi-robot systems. The scalability of
-                the method is also emphasized by showcasing tasks with up to 100 agents. The results
-                of this work indicate the promise of blending robust optimization, distribution
-                steering and distributed optimization towards achieving scalable, safe and robust
-                multi-robot control.</p></div>
+              <div class="abstract hidden"><p>In this work, we propose a novel sim2real framework for multi-robot control that relies on stochastic optimal control theory. 
+                Specifically, we use a recently proposed Deep Forward-Backward Stochastic Differential Equations (FBSDEs) algorithm to train LSTM-network-based feedback policies 
+                in simulation that are subsequently deployed directly on real hardware. This particular Deep FBSDE variant is tailored for multi-agent systems and ensures safety 
+                during the entire training process. Safety is facilitated by employing stochastic control barrier functions and decentralization is achieved by an ADMM-based consensus 
+                optimization approach. By randomizing the initial conditions and inducing noise into the robot's dynamics, the policy is trained to control a mini-batch of trajectories 
+                to their respective targets on average, while ensuring safety for each trajectory with probability 1. We hypothesize that the ability to control an ensemble of trajectories 
+                empowers the feedback policy to compensate for uncertainty when transferred from simulation to real robots. We test this hypothesis on the Robotarium swarm-robotics testbed 
+                and successfully demonstrate the completion of tasks as well as safe operation when a policy trained in simulation is deployed without any prior real-world experience.</p></div>
             </div>
           </div>
         </li>
