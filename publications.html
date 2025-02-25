@@ -248,76 +248,23 @@
           <div>
             <div class="col-sm-2 abbr"><abbr class="badge" style="width: 120px;">IROS 2024 </abbr></div>
             <div id="saravanos2022distributed_mpcs">
-              <div class="title"><font size="+1">Distributed Model Predictive Covariance
-                Steering</font></div>
-              <div class="author"><strong><font color="#A0522D">A.D. Saravanos</font></strong>, I.M.
-                Balci, E. Bakolas, and E.A. Theodorou
+              <div class="title"><font size="+1">A Robust Differential Neural ODE Optimizer</font></div>
+              <div class="author">P. Theodoropoulos, G.H. Liu, T. Chen, <strong><font color="#A0522D">A.D. Saravanos</font></strong> and E.A. Theodorou
               </div>
-              <div class="periodical"><em> <font color="#104393">IEEE/RSJ International Conference on
-                Intelligent Robots and Systems (IROS) </font> </em>, 2024
+              <div class="periodical"><em> <font color="#104393">International Conference on Learning Representations (ICLR)</font> </em>, 2024
               </div>
               <div class="links"><a class="abstract btn btn-sm z-depth-0" role="button">Abstract</a>
                 <a href="https://arxiv.org/abs/2212.00398" class="btn btn-sm z-depth-0"
-                   role="button" target="_blank" rel="noopener noreferrer">PDF</a> <a
-                        href="https://www.youtube.com/watch?v=Hks-0BRozxA"
-                        class="btn btn-sm z-depth-0" role="button" target="_blank"
-                        rel="noopener noreferrer">Video</a></div>
-              <div class="abstract hidden"><p>This paper proposes Distributed Model Predictive
-                Covariance Steering (DMPCS), a novel method for safe multi-robot control under
-                uncertainty. The scope of our approach is to blend covariance steering theory,
-                distributed optimization and model predictive control (MPC) into a single
-                methodology that is safe, scalable and decentralized. Initially, we pose a problem
-                formulation that uses the Wasserstein distance to steer the state distributions of a
-                multi-robot team to desired targets, and probabilistic constraints to ensure safety.
-                We then transform this problem into a finite-dimensional optimization one by
-                utilizing a disturbance feedback policy parametrization for covariance steering and
-                a tractable approximation of the safety constraints. To solve the latter problem, we
-                derive a decentralized consensus-based algorithm using the Alternating Direction
-                Method of Multipliers (ADMM). This method is then extended to a receding horizon
-                form, which yields the proposed DMPCS algorithm. Simulation experiments on
-                large-scale problems with up to hundreds of robots successfully demonstrate the
-                effectiveness and scalability of DMPCS. Its superior capability in achieving safety
-                is also highlighted through a comparison against a standard stochastic MPC
-                approach.</p></div>
-            </div>
-          </div>
-        </li>
-
-        <li>
-          <div>
-            <div class="col-sm-2 abbr"><abbr class="badge" style="width: 120px;">IROS 2024 </abbr></div>
-            <div id="saravanos2022distributed_mpcs">
-              <div class="title"><font size="+1">Distributed Model Predictive Covariance
-                Steering</font></div>
-              <div class="author"><strong><font color="#A0522D">A.D. Saravanos</font></strong>, I.M.
-                Balci, E. Bakolas, and E.A. Theodorou
-              </div>
-              <div class="periodical"><em> <font color="#104393">IEEE/RSJ International Conference on
-                Intelligent Robots and Systems (IROS) </font> </em>, 2024
-              </div>
-              <div class="links"><a class="abstract btn btn-sm z-depth-0" role="button">Abstract</a>
-                <a href="https://arxiv.org/abs/2212.00398" class="btn btn-sm z-depth-0"
-                   role="button" target="_blank" rel="noopener noreferrer">PDF</a> <a
-                        href="https://www.youtube.com/watch?v=Hks-0BRozxA"
-                        class="btn btn-sm z-depth-0" role="button" target="_blank"
-                        rel="noopener noreferrer">Video</a></div>
-              <div class="abstract hidden"><p>This paper proposes Distributed Model Predictive
-                Covariance Steering (DMPCS), a novel method for safe multi-robot control under
-                uncertainty. The scope of our approach is to blend covariance steering theory,
-                distributed optimization and model predictive control (MPC) into a single
-                methodology that is safe, scalable and decentralized. Initially, we pose a problem
-                formulation that uses the Wasserstein distance to steer the state distributions of a
-                multi-robot team to desired targets, and probabilistic constraints to ensure safety.
-                We then transform this problem into a finite-dimensional optimization one by
-                utilizing a disturbance feedback policy parametrization for covariance steering and
-                a tractable approximation of the safety constraints. To solve the latter problem, we
-                derive a decentralized consensus-based algorithm using the Alternating Direction
-                Method of Multipliers (ADMM). This method is then extended to a receding horizon
-                form, which yields the proposed DMPCS algorithm. Simulation experiments on
-                large-scale problems with up to hundreds of robots successfully demonstrate the
-                effectiveness and scalability of DMPCS. Its superior capability in achieving safety
-                is also highlighted through a comparison against a standard stochastic MPC
-                approach.</p></div>
+                   role="button" target="_blank" rel="noopener noreferrer">PDF</a> </div>
+              <div class="abstract hidden"><p>Neural networks and neural ODEs tend to be vulnerable to adversarial attacks, rendering robust optimizers 
+                critical to curb the success of such attacks. In this regard, the key insight of this work is to interpret Neural ODE optimization as a 
+                min-max optimal control problem. More particularly, we present Game Theoretic Second-Order Neural Optimizer (GTSONO), a robust game theoretic 
+                optimizer based on the principles of min-max Differential Dynamic Programming. The proposed method exhibits significant computational 
+                benefits due to efficient matrix decompositions and provides convergence guarantees to local saddle points. Empirically, the robustness of 
+                the proposed optimizer is demonstrated through greater robust accuracy compared to benchmark optimizers when trained on clean images. 
+                Additionally, its ability to provide a performance increase when adapted to an already existing adversarial defense technique is also illustrated. 
+                Finally, the superiority of the proposed update law over its gradient based counterpart highlights the potential benefits of incorporating robust 
+                optimal control paradigms into adversarial training methods.</p></div>
             </div>
           </div>
         </li>
@@ -362,6 +309,46 @@
                 against related methods is also illustrated. The results of this work indicate the
                 importance of hierarchical distribution control approaches towards achieving safe
                 and scalable solutions for the control of VLMAS.</p></div>
+            </div>
+          </div>
+        </li>
+
+
+        <li>
+          <div>
+            <div class="col-sm-2 abbr"><abbr class="badge" style="width: 120px;">IROS 2024 </abbr></div>
+            <div id="saravanos2022distributed_mpcs">
+              <div class="title"><font size="+1">Distributed Model Predictive Covariance
+                Steering</font></div>
+              <div class="author"><strong><font color="#A0522D">A.D. Saravanos</font></strong>, I.M.
+                Balci, E. Bakolas, and E.A. Theodorou
+              </div>
+              <div class="periodical"><em> <font color="#104393">IEEE/RSJ International Conference on
+                Intelligent Robots and Systems (IROS) </font> </em>, 2024
+              </div>
+              <div class="links"><a class="abstract btn btn-sm z-depth-0" role="button">Abstract</a>
+                <a href="https://arxiv.org/abs/2212.00398" class="btn btn-sm z-depth-0"
+                   role="button" target="_blank" rel="noopener noreferrer">PDF</a> <a
+                        href="https://www.youtube.com/watch?v=Hks-0BRozxA"
+                        class="btn btn-sm z-depth-0" role="button" target="_blank"
+                        rel="noopener noreferrer">Video</a></div>
+              <div class="abstract hidden"><p>This paper proposes Distributed Model Predictive
+                Covariance Steering (DMPCS), a novel method for safe multi-robot control under
+                uncertainty. The scope of our approach is to blend covariance steering theory,
+                distributed optimization and model predictive control (MPC) into a single
+                methodology that is safe, scalable and decentralized. Initially, we pose a problem
+                formulation that uses the Wasserstein distance to steer the state distributions of a
+                multi-robot team to desired targets, and probabilistic constraints to ensure safety.
+                We then transform this problem into a finite-dimensional optimization one by
+                utilizing a disturbance feedback policy parametrization for covariance steering and
+                a tractable approximation of the safety constraints. To solve the latter problem, we
+                derive a decentralized consensus-based algorithm using the Alternating Direction
+                Method of Multipliers (ADMM). This method is then extended to a receding horizon
+                form, which yields the proposed DMPCS algorithm. Simulation experiments on
+                large-scale problems with up to hundreds of robots successfully demonstrate the
+                effectiveness and scalability of DMPCS. Its superior capability in achieving safety
+                is also highlighted through a comparison against a standard stochastic MPC
+                approach.</p></div>
             </div>
           </div>
         </li>
