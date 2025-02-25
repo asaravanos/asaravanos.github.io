@@ -493,7 +493,7 @@
         </li>
       </ol>
 
-        <h4 class="text-left">Workshop Papers \& Technical Reports</h4>
+        <h4 class="text-left">Workshop Papers & Technical Reports</h4>
       <ol class="bibliography">
         <li>
           <div>
@@ -507,9 +507,12 @@
               <div class="links"><a class="abstract btn btn-sm z-depth-0" role="button">Abstract</a>
                 <a href="https://drive.google.com/file/d/1o5BmSE1nQELEX8MEWFxIHtn_usvRGF8G/view" class="btn btn-sm z-depth-0"
                    role="button" target="_blank" rel="noopener noreferrer">PDF</a> <a
-                        href="https://www.youtube.com/watch?v=Q5xghaqt4SQ"
+                        href="https://www.youtube.com/watch?v=3SvrluLq4ic"
                         class="btn btn-sm z-depth-0" role="button" target="_blank"
-                        rel="noopener noreferrer">Video</a></div>
+                        rel="noopener noreferrer">Video 1</a> <a
+                        href="https://www.youtube.com/watch?v=v2tb0Znh6lw"
+                        class="btn btn-sm z-depth-0" role="button" target="_blank"
+                        rel="noopener noreferrer">Video 2</a></div>
               <div class="abstract hidden"><p>In this work, we propose a novel sim2real framework for multi-robot control that relies on stochastic optimal control theory. 
                 Specifically, we use a recently proposed Deep Forward-Backward Stochastic Differential Equations (FBSDEs) algorithm to train LSTM-network-based feedback policies 
                 in simulation that are subsequently deployed directly on real hardware. This particular Deep FBSDE variant is tailored for multi-agent systems and ensures safety 
@@ -526,26 +529,26 @@
           <div>
             <div class="col-sm-2 abbr"><abbr class="badge" style="width: 120px;"> Preprint </abbr></div>
             <div id="abdul2024robust">
-              <div class="title"><font size="+1">Second-Order Constrained Dynamic Optimization</font></div>
-              <div class="author"> Y. Aoyama, O. So, <strong><font color="#A0522D">A.D. Saravanos</font></strong> and E.A. Theodorou
+              <div class="title"><font size="+1">Sampling-Based Optimization for Multi-Agent Model Predictive Control</font></div>
+              <div class="author"> Z. Wang, <strong><font color="#A0522D">A.D. Saravanos</font></strong>, H. Almubarak, O. So and E.A. Theodorou
               </div>
-              <div class="periodical"><font color="#3B57D3">Preprint (Under review)</font>, 2024.
+              <div class="periodical"><font color="#3B57D3">Technical Report</font>, 2022.
               </div>
               <div class="links"><a class="abstract btn btn-sm z-depth-0" role="button">Abstract</a>
-                <a href="https://arxiv.org/abs/2409.11649" class="btn btn-sm z-depth-0"
-                   role="button" target="_blank" rel="noopener noreferrer">PDF</a></div>
-              <div class="abstract hidden"><p>This paper provides an overview, analysis, and comparison of second-order dynamic optimization algorithms, 
-                i.e., constrained Differential Dynamic Programming (DDP) and Sequential Quadratic Programming (SQP). Although a variety of these algorithms has been 
-                proposed and used successfully, there exists a gap in understanding the key differences and advantages, which we aim to provide in this work. For 
-                constrained DDP, we choose methods that incorporate nonlinear programming techniques to handle state and control constraints, including Augmented 
-                Lagrangian (AL), Interior Point, Primal Dual Augmented Lagrangian (PDAL), and Alternating Direction Method of Multipliers. Both DDP and SQP are 
-                provided in single- and multiple-shooting formulations, where constraints that arise from dynamics are encoded implicitly and explicitly, respectively. 
-                As a byproduct of the review, we also propose a single-shooting PDAL DDP which is robust to the growth of penalty parameters and performs better than 
-                the normal AL variant. We perform extensive numerical experiments on various systems with increasing complexity to investigate the quality of the solutions, 
-                the levels of constraint violation, iterations for convergence, and the sensitivity of final solutions with respect to initialization. The results show that 
-                DDP often has the advantage of finding better local minima, while SQP tends to achieve better constraint satisfaction. For multiple-shooting formulation, 
-                both DDP and SQP can enjoy informed initial guesses, while the latter appears to be more advantageous in complex systems. It is also worth highlighting that 
-                DDP provides favorable computational complexity and feedback gains as a byproduct of optimization.</p></div>
+                <a href="https://arxiv.org/abs/2211.11878" class="btn btn-sm z-depth-0"
+                   role="button" target="_blank" rel="noopener noreferrer">PDF</a> <a
+                        href="https://www.youtube.com/watch?v=XHDJhNDqwtU"
+                        class="btn btn-sm z-depth-0" role="button" target="_blank"
+                        rel="noopener noreferrer">Video</a></div>
+              <div class="abstract hidden"><p>We systematically review the Variational Optimization, Variational Inference and Stochastic Search perspectives on sampling-based 
+                dynamic optimization and discuss their connections to state-of-the-art optimizers and Stochastic Optimal Control (SOC) theory. A general convergence and sample 
+                complexity analysis on the three perspectives is provided through the unifying Stochastic Search perspective. We then extend these frameworks to their distributed 
+                versions for multi-agent control by combining them with consensus Alternating Direction Method of Multipliers (ADMM) to decouple the full problem into local 
+                neighborhood-level ones that can be solved in parallel. Model Predictive Control (MPC) algorithms are then developed based on these frameworks, leading to fully 
+                decentralized sampling-based dynamic optimizers. The capabilities of the proposed algorithms framework are demonstrated on multiple complex multi-agent tasks for 
+                vehicle and quadcopter systems in simulation. The results compare different distributed sampling-based optimizers and their centralized counterparts using unimodal 
+                Gaussian, mixture of Gaussians, and stein variational policies. The scalability of the proposed distributed algorithms is demonstrated on a 196-vehicle scenario 
+                where a direct application of centralized sampling-based methods is shown to be prohibitive.</p></div>
             </div>
           </div>
         </li>
