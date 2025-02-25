@@ -68,6 +68,10 @@ body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+p, h1, h2, h3, h4, h5, h6, em, div, li, span, strong {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
 body {
     padding-bottom: 70px;
     color: var(--global-text-color);
