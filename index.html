@@ -170,12 +170,12 @@
                             <div id="saravanos2024deep">
                                 <div class="title"><font size="+1">Deep Distributed Optimization for Large-Scale
                                     Quadratic Programming</font></div>
-                                <div class="author"><strong><font color="#A0522D"> A.D. Saravanos</font></strong>, H.
+                                <div class="author"><strong><font color="#0056b3"> A.D. Saravanos</font></strong>, H.
                                     Kuperman, A. Oshin, A.T. Abdul, V. Pacelli and E.A. Theodorou
                                 </div>
-                                <div class="periodical"> <strong><font color="#3B57D3"> International Conference on Learning Representations (ICLR)</font></strong>, 2025.</div>
+                                <div class="periodical"> <strong><font color="#b34700"> International Conference on Learning Representations (ICLR)</font></strong>, 2025.</div>
                                 <div class="links"><a class="abstract btn btn-sm z-depth-0" role="button">Abstract</a>
-                                    <a href="https://arxiv.org/abs/2412.12156" class="btn btn-sm z-depth-0"
+                                    <a href="https://openreview.net/pdf?id=hzuumhfYSO" class="btn btn-sm z-depth-0"
                                        role="button" target="_blank" rel="noopener noreferrer">PDF</a></div>
                                 <div class="abstract hidden"><p>Quadratic programming (QP) forms a crucial foundation in
                                     optimization, encompassing a broad spectrum of domains and serving as the basis for
@@ -207,41 +207,78 @@
                     <li>
                         <div>
                             <div class="col-sm-2 abbr"><abbr class="badge" style="width: 120px;"> Preprint </abbr></div>
-                            <div id="abdul2024robust">
-                                <div class="title"><font size="+1">Scaling Robust Optimization for Multi-Agent Robotic
-                                    Systems: A Distributed Perspective</font></div>
-                                <div class="author"> A.T. Abdul*, <strong><font color="#A0522D"> A.D. Saravanos*</font></strong> and E.A. Theodorou
+                            <div id="saravanos2024deep">
+                                <div class="title"><font size="+1">Second-Order Constrained Dynamic Optimization</font></div>
+                                <div class="author">Y. Aoyama, O. So, <strong><font color="#0056b3"> A.D. Saravanos</font></strong> and E.A. Theodorou
                                 </div>
-                                <div class="periodical"><font color="#3B57D3"> Preprint (Under review)</font>, 2024.
+                                <div class="periodical"> <strong><font color="#b34700">International Journal of Robotics Research (IJRR)</font></strong>  <font color="#b34700"> - Under minor revision</font>, 2025.</div>
+                                <div class="links"><a class="abstract btn btn-sm z-depth-0" role="button">Abstract</a>
+                                    <a href="https://arxiv.org/pdf/2409.11649" class="btn btn-sm z-depth-0"
+                                       role="button" target="_blank" rel="noopener noreferrer">PDF</a></div>
+                                <div class="abstract hidden"><p>This paper provides an overview, analysis, and comparison of second-order dynamic optimization algorithms, i.e., constrained Differential 
+                                    Dynamic Programming (DDP) and Sequential Quadratic Programming (SQP). Although a variety of these algorithms have been proposed and used successfully, there exists a 
+                                    gap in understanding the key differences and advantages, which we aim to provide in this work. For constrained DDP, we choose methods that incorporate nonlinear 
+                                    programming techniques to handle state and control constraints, including Augmented Lagrangian (AL), Interior Point, Primal-Dual Augmented Lagrangian (PDAL), and 
+                                    Alternating Direction Method of Multipliers (ADMM). Both DDP and SQP are provided in single- and multiple-shooting formulations, where constraints that arise from dynamics 
+                                    are encoded implicitly and explicitly, respectively. As a byproduct of the review, we propose a single-shooting PDAL DDP that has more favorable properties than the 
+                                    standard AL variant, such as the robustness to the growth of penalty parameters. We perform extensive numerical experiments on a variety of systems with increasing 
+                                    complexity to investigate the quality of the solutions, the levels of constraint violation, and the sensitivity of final solutions with respect to initialization, as well 
+                                    as targets. The results show that single-shooting PDAL DDP and multiple-shooting SQP are the most robust methods. For multiple-shooting formulation, both DDP and SQP can 
+                                    enjoy informed initial guesses, while the latter appears to be more advantageous in complex systems. It is also worth highlighting that DDP provides favorable computational 
+                                    complexity and feedback gains as a byproduct of optimization as is.</p></div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div>
+                            <div class="col-sm-2 abbr"><abbr class="badge" style="width: 120px;"> Preprint </abbr></div>
+                            <div id="saravanos2024deep">
+                                <div class="title"><font size="+1">Momentum Multi-Marginal Schrödinger Bridge Matching</font></div>
+                                <div class="author">P. Theodoropoulos, <strong><font color="#0056b3"> A.D. Saravanos</font></strong>, E.A. Theodorou and G.H. Liu
+                                </div>
+                                <div class="periodical"> <strong><font color="#b34700"> Neural Information Processing Systems (NeurIPS)</font></strong>, 2025.</div>
+                                <div class="links"><a class="abstract btn btn-sm z-depth-0" role="button">Abstract</a>
+                                    <a href="https://arxiv.org/pdf/2506.10168" class="btn btn-sm z-depth-0"
+                                       role="button" target="_blank" rel="noopener noreferrer">PDF</a></div>
+                                <div class="abstract hidden"><p>Understanding complex systems by inferring trajectories from sparse sample snapshots is a fundamental challenge in a wide range of domains, 
+                                    e.g., single-cell biology, meteorology, and economics. Despite advancements in Bridge and Flow matching frameworks, current methodologies rely on pairwise interpolation 
+                                    between adjacent snapshots. This hinders their ability to capture long-range temporal dependencies and potentially affects the coherence of the inferred trajectories. 
+                                    To address these issues, we introduce \textbf{Momentum Multi-Marginal Schr\"odinger Bridge Matching (3MSBM)}, a novel matching framework that learns smooth measure-valued 
+                                    splines for stochastic systems that satisfy multiple positional constraints. This is achieved by lifting the dynamics to phase space and generalizing stochastic bridges 
+                                    to be conditioned on several points, forming a multi-marginal conditional stochastic optimal control problem. The underlying dynamics are then learned by minimizing a 
+                                    variational objective, having fixed the path induced by the multi-marginal conditional bridge. As a matching approach, 3MSBM learns transport maps that preserve intermediate 
+                                    marginals throughout training, significantly improving convergence and scalability. Extensive experimentation in a series of real-world applications validates the superior 
+                                    performance of 3MSBM compared to existing methods in capturing complex dynamics with temporal dependencies, opening new avenues for training matching frameworks in multi-marginal settings.</p></div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div>
+                            <div class="col-sm-2 abbr"><abbr class="badge" style="width: 120px;"> Preprint </abbr></div>
+                            <div id="abdul2024robust">
+                                <div class="title"><font size="+1">Scaling Robust Optimization for Swarms: A Distributed Perspective</font></div>
+                                <div class="author"> A.T. Abdul*, <strong><font color="#0056b3"> A.D. Saravanos*</font></strong> and E.A. Theodorou
+                                </div>
+                                <div class="periodical"><strong><font color="#b34700">IEEE Transactions on Automatic Control (TAC)</font></strong>  <font color="#b34700"> - Under review</font>, 2025.
                                 </div>
                                 <div class="links"><a class="abstract btn btn-sm z-depth-0" role="button">Abstract</a>
-                                    <a href="https://arxiv.org/abs/2402.16227" class="btn btn-sm z-depth-0"
+                                    <a href="https://arxiv.org/pdf/2508.11799" class="btn btn-sm z-depth-0"
                                        role="button" target="_blank" rel="noopener noreferrer">PDF</a> <a
                                             href="https://youtu.be/Q5xghaqt4SQ"
                                             class="btn btn-sm z-depth-0" role="button" target="_blank"
                                             rel="noopener noreferrer">Video</a></div>
-                                <div class="abstract hidden"><p>This paper presents a novel distributed robust
-                                    optimization scheme for steering distributions of multi-agent systems under
-                                    stochastic and deterministic uncertainty. Robust optimization is a subfield of
-                                    optimization which aims in discovering an optimal solution that remains robustly
-                                    feasible for all possible realizations of the problem parameters within a given
-                                    uncertainty set. Such approaches would naturally constitute an ideal candidate for
-                                    multi-robot control, where in addition to stochastic noise, there might be exogenous
-                                    deterministic disturbances. Nevertheless, as these methods are usually associated
-                                    with significantly high computational demands, their application to multi-agent
-                                    robotics has remained limited. The scope of this work is to propose a scalable
-                                    robust optimization framework that effectively addresses both types of
-                                    uncertainties, while retaining computational efficiency and scalability. In this
-                                    direction, we provide tractable approximations for robust constraints that relevant
-                                    in multi-robot settings. Subsequently, we demonstrate how computations can be
-                                    distributed through an Alternating Direction Method of Multipliers (ADMM) approach
-                                    towards achieving scalability and communication efficiency. Simulation results
-                                    highlight the performance of the proposed algorithm in effectively handling both
-                                    stochastic and deterministic uncertainty in multi-robot systems. The scalability of
-                                    the method is also emphasized by showcasing tasks with up to 100 agents. The results
-                                    of this work indicate the promise of blending robust optimization, distribution
-                                    steering and distributed optimization towards achieving scalable, safe and robust
-                                    multi-robot control.</p></div>
+                                <div class="abstract hidden"><p>This article introduces a decentralized robust optimization framework for safe multi-agent control under uncertainty. Although stochastic noise 
+                                    has been the primary form of modeling uncertainty in such systems, these formulations might fall short in addressing uncertainties that are deterministic in nature or simply 
+                                    lack probabilistic data. To ensure safety under such scenarios, we employ the concept of robust constraints that must hold for all possible uncertainty realizations lying 
+                                    inside a bounded set. Nevertheless, standard robust optimization approaches become intractable due to the large number or non-convexity of the constraints involved in safe 
+                                    multi-agent control. To address this, we introduce novel robust reformulations that significantly reduce complexity without compromising safety. The applicability of the 
+                                    framework is further broadened to address both deterministic and stochastic uncertainties by incorporating robust chance constraints and distribution steering techniques. 
+                                    To achieve scalability, we derive a distributed approach based on the Alternating Direction Method of Multipliers (ADMM), supported by a convergence study that accounts for 
+                                    the underlying non-convexity. In addition, computational complexity bounds highlighting the efficiency of the proposed frameworks against standard approaches are presented. 
+                                    Finally, the robustness and scalability of the framework is demonstrated through extensive simulation results across diverse scenarios, including environments with nonconvex 
+                                    obstacles and up to 246 agents.</p></div>
                             </div>
                         </div>
                     </li>
@@ -252,10 +289,10 @@
                             <div id="saravanos2022distributed_mpcs">
                                 <div class="title"><font size="+1">Distributed Model Predictive Covariance
                                     Steering</font></div>
-                                <div class="author"><strong><font color="#A0522D"> A.D. Saravanos</font></strong>, I.M.
+                                <div class="author"><strong><font color="#0056b3"> A.D. Saravanos</font></strong>, I.M.
                                     Balci, E. Bakolas, and E.A. Theodorou
                                 </div>
-                                <div class="periodical"> <strong><font color="#3B57D3">IEEE/RSJ International Conference on
+                                <div class="periodical"> <strong><font color="#b34700">IEEE/RSJ International Conference on
                                     Intelligent Robots and Systems (IROS)</font></strong>, 2024.
                                 </div>
                                 <div class="links"><a class="abstract btn btn-sm z-depth-0" role="button">Abstract</a>
@@ -284,10 +321,10 @@
                             <div id="saravanos2022distributed_ddp">
                                 <div class="title"><font size="+1">Distributed Differential Dynamic Programming
                                     Architectures for Large-Scale Multi-Agent Control</font></div>
-                                <div class="author"><strong><font color="#A0522D"> A.D. Saravanos</font></strong>, Y.
+                                <div class="author"><strong><font color="#0056b3"> A.D. Saravanos</font></strong>, Y.
                                     Aoyama, H. Zhu, and E. A. Theodorou
                                 </div>
-                                <div class="periodical"> <strong><font color="#3B57D3">IEEE Transactions on Robotics (T-RO)</font></strong>, 2023.</div>
+                                <div class="periodical"> <strong><font color="#b34700">IEEE Transactions on Robotics (T-RO)</font></strong>, 2023.</div>
                                 <div class="links"><a class="abstract btn btn-sm z-depth-0" role="button">Abstract</a>
                                     <a href="https://arxiv.org/abs/2207.13255" class="btn btn-sm z-depth-0"
                                        role="button" target="_blank" rel="noopener noreferrer">PDF</a> <a
@@ -326,10 +363,10 @@
                             <div id="saravanos2023hierarchical">
                                 <div class="title"><font size="+1">Distributed Hierarchical Distribution Control for
                                     Very-Large-Scale Clustered Multi-Agent Systems</font></div>
-                                <div class="author"><strong><font color="#A0522D"> A.D. Saravanos</font></strong>, Y.
+                                <div class="author"><strong><font color="#0056b3"> A.D. Saravanos</font></strong>, Y.
                                     Li and E.A. Theodorou
                                 </div>
-                                <div class="periodical"> <strong><font color="#3B57D3">Robotics: Science and Systems (RSS)</font></strong>, 2023.</div>
+                                <div class="periodical"> <strong><font color="#b34700">Robotics: Science and Systems (RSS)</font></strong>, 2023.</div>
                                 <div class="links"><a class="abstract btn btn-sm z-depth-0" role="button">Abstract</a>
                                     <a href="https://www.roboticsproceedings.org/rss19/p110.html"
                                        class="btn btn-sm z-depth-0" role="button" target="_blank"
@@ -369,9 +406,9 @@
                             <div id="pereira2022decentralized">
                                 <div class="title"><font size="+1">Decentralized Safe Multi-agent Stochastic Optimal
                                     Control using Deep FBSDEs and ADMM</font></div>
-                                <div class="author"> M.A. Pereira*, <strong><font color="#A0522D"> A.D. Saravanos*</font></strong>, O. So, and E.A. Theodorou
+                                <div class="author"> M.A. Pereira*, <strong><font color="#0056b3"> A.D. Saravanos*</font></strong>, O. So, and E.A. Theodorou
                                 </div>
-                                <div class="periodical"> <strong><font color="#3B57D3">Robotics: Science and Systems (RSS)</font></strong>, 2022. </div>
+                                <div class="periodical"> <strong><font color="#b34700">Robotics: Science and Systems (RSS)</font></strong>, 2022. </div>
                                 <div class="links"><a class="abstract btn btn-sm z-depth-0" role="button">Abstract</a>
                                     <a href="http://www.roboticsproceedings.org/rss18/p055.html"
                                        class="btn btn-sm z-depth-0" role="button" target="_blank"
@@ -408,10 +445,10 @@
                             <div id="saravanos2021distributed">
                                 <div class="title"><font size="+1">Distributed Covariance Steering with Consensus ADMM
                                     for Stochastic Multi-Agent Systems</font></div>
-                                <div class="author"><strong><font color="#A0522D"> A.D. Saravanos</font></strong>, A.
+                                <div class="author"><strong><font color="#0056b3"> A.D. Saravanos</font></strong>, A.
                                     Tsolovikos, E. Bakolas, and E.A. Theodorou
                                 </div>
-                                <div class="periodical"> <strong><font color="#3B57D3"> Robotics: Science and Systems (RSS)</font></strong>, 2021.</div>
+                                <div class="periodical"> <strong><font color="#b34700"> Robotics: Science and Systems (RSS)</font></strong>, 2021.</div>
                                 <div class="links"><a class="abstract btn btn-sm z-depth-0" role="button">Abstract</a>
                                     <a href="http://www.roboticsproceedings.org/rss17/p075.html"
                                        class="btn btn-sm z-depth-0" role="button" target="_blank"
