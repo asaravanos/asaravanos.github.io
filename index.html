@@ -49,7 +49,7 @@
     .hero { display: grid; grid-template-columns: 1.5fr 1fr; gap: 28px; align-items: start; }
     .title { font-size: 40px; color: var(--text); font-weight: 600; margin-bottom: 2px;   /* ↓ Tightens spacing below name */}
     .subtitle { font-size: 27px; color: var(--text); margin-top: 4px; font-weight: 400; }
-    .portrait { width: 100%; max-width: 320px; border-radius: 10px; border: 1px solid var(--border); box-shadow: 0 6px 24px rgba(0,0,0,.35); object-fit: cover; }
+    .portrait { width: 75%; max-width: 320px; border-radius: 10px; border: 1px solid var(--border); box-shadow: 0 6px 24px rgba(0,0,0,.35); object-fit: cover; }
     .lead p { margin: 0 0 12px; }
 
     hr.sep { border: none; border-top: 1px solid var(--border); margin: 28px 0; }
@@ -59,8 +59,8 @@
     h2 { font-size: clamp(20px, 2.6vw, 28px); margin: 0 0 12px; letter-spacing: -0.01em; }
 
     /* News list */
-    .news { display: grid; gap: 14px; }
-    .news-item { display: grid; grid-template-columns: 120px 1fr; gap: 14px; padding: 10px 0; border-bottom: 1px dashed var(--border); }
+    .news { display: grid; gap: 5px; }
+    .news-item { display: grid; grid-template-columns: 120px 1fr; gap: 10px; padding: 5px 0; border-bottom: 1px dashed var(--border); }
     .news-date { color: var(--muted); font-weight: 600; }
 
     /* Publications */
@@ -99,6 +99,29 @@
       font-weight: 600; /* instead of 700 */
     }
     details > summary { display: none; }
+
+    .lead p{
+      text-align: justify;
+    }
+
+    .abstract-box[hidden] { display: none; }
+
+    .abstract-box {
+      background: var(--elev-1);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 14px;
+      margin-top: 8px;
+    }
+
+    .abstract-box p {
+      margin: 0;
+      font-size: 0.98rem;
+      color: #444;          /* or var(--text) if you prefer */
+      text-align: justify;
+      text-justify: inter-word;
+      line-height: 1.65;
+    }
   </style>
 </head>
 <body>
@@ -131,7 +154,6 @@
                 towards developing <strong>scalable</strong>, <strong>robust</strong>, and <strong>generalizable</strong> methods for
                 <strong>large-scale decision-making</strong> systems in autonomy, transportation, resource allocation, and many other
                 application areas.</p>
-          <p>See my <a href="#cv">full CV</a> here.</p>
           <p>Contact: <span style="font-family:'JetBrains Mono', monospace;">asaravan [at] mit [dot] edu</span></p>
         </div>
       </div>
@@ -146,13 +168,24 @@
     <section aria-labelledby="news-title">
       <h2 id="news-title">News</h2>
       <div class="news">
-        <div class="news-item"><div class="news-date">Nov 2025</div><div>Excited to give a guest lecture "<em>Towards Large-Scale Autonomy: Multi-Agent Planning and Control</em>" on Nov. 6 at the Worcester Polytechnic Institute (WPI) Robotics Engineering Department.</div></div>
-        <div class="news-item"><div class="news-date">Oct 2025</div><div>I'll be at the INFORMS Annual Meeting 2025 on Oct. 26-29 in Atlanta. Looking forward to seeing the latest developments in optimization and AI for OR! Feel free to shoot an email if you'd like to chat!</div></div>
-        <div class="news-item"><div class="news-date">Sep 2025</div><div>Our paper <em>Momentum Multi-Marginal Schrödinger Bridge Matching</em> is accepted at NeurIPS 2025.</div></div>
-        <div class="news-item"><div class="news-date">Sep 2025</div><div>Our paper <em>Scaling Robust Optimization for Swarms: A Distributed Perspective</em> available on arXiv.</div></div>
-        <div class="news-item"><div class="news-date">Aug 2025</div><div>I have joined MIT as a postdoc! I’ll be working with Prof. Chuchu Fan at the REALM Lab.</div></div>
-        <div class="news-item"><div class="news-date">Jul 2025</div><div>I defended my PhD thesis on <em>Distributed Optimization Architectures for Large-Scale Decision-Making</em> at Georgia Tech! Many thanks to my advisor Prof. Evangelos Theodorou and my committee Profs. Arkadi Nemirovski, Yao Xie, Justin Romberg, and Efstathios Bakolas.</div></div>
-        <div class="news-item"><div class="news-date">Jul 2025</div><div>Our papers <em>Nonlinear Robust Optimization for Planning and Control</em> and <em>Operator Splitting Covariance Steering for Safe Stochastic Nonlinear Control</em> have been accepted at CDC 2025.</div></div>
+        <div class="news-item"><div class="news-date">Nov 2025</div><div>Excited to give a guest lecture <strong>"Towards Large-Scale Autonomy: Multi-Agent Planning and Control"</strong> on Nov. 6 at the <a href="https://www.wpi.edu/academics/departments/robotics-engineering" target="_blank">Worcester Polytechnic Institute (WPI) Robotics Engineering Department</a>.</div></div>
+        <div class="news-item"><div class="news-date">Oct 2025</div><div>I'll be at the <strong><a href="https://meetings.informs.org/wordpress/annual/" target="_blank">INFORMS Annual Meeting 2025</a></strong> on Oct. 26-29 in Atlanta. Looking forward to seeing the latest developments in optimization and AI for OR! Feel free to shoot an email if you'd like to chat!</div></div>
+        <div class="news-item"><div class="news-date">Sep 2025</div><div>>Our paper <strong><a href="https://arxiv.org/abs/2506.10168" target="_blank">Momentum Multi-Marginal Schrödinger Bridge Matching</a></strong> has been accepted at <strong>NeurIPS 2025</strong>.</div></div>
+        <div class="news-item"><div class="news-date">Sep 2025</div><div>Our paper
+                    <strong><a href="https://arxiv.org/abs/2508.11799" target="_blank">
+                    Scaling Robust Optimization for Swarms: A Distributed Perspective</a></strong>
+                    available on arXiv.</div></div>
+        <div class="news-item"><div class="news-date">Aug 2025</div><div>I have joined <strong>MIT</strong> as a <strong>postdoc</strong>! I’ll be working 
+                with Prof. <a href="https://chuchu.mit.edu/" target="_blank" rel="noopener noreferrer">Chuchu Fan</a> at the <a href="https://aeroastro.mit.edu/realm/" target="_blank" rel="noopener noreferrer">REALM Lab</a>.</div></div>
+        <div class="news-item"><div class="news-date">Jul 2025</div><div>I defended my <strong>PhD thesis</strong> on
+                    <strong><a href="https://repository.gatech.edu/entities/publication/ea27339d-e8cb-42d1-9180-571c809242bd" target="_blank" rel="noopener noreferrer">Distributed Optimization Architectures for Large-Scale Decision-Making</a></strong> at <strong>Georgia Tech</strong>! 
+                    Many thanks to my advisor Prof. <a href="https://scholar.google.com/citations?hl=en&user=dG9MV7oAAAAJ" target="_blank" rel="noopener noreferrer">Evangelos Theodorou</a> and my committee Profs. 
+                    <a href="https://www.isye.gatech.edu/users/arkadi-nemirovski" target="_blank" rel="noopener noreferrer">Arkadi Nemirovski</a>, 
+                    <a href="https://www2.isye.gatech.edu/~yxie77/" target="_blank" rel="noopener noreferrer">Yao Xie</a>, 
+                    <a href="https://ece.gatech.edu/directory/justin-romberg" target="_blank" rel="noopener noreferrer">Justin Romberg</a>, and 
+                    <a href="https://www.ae.utexas.edu/people/faculty/faculty-directory/bakolas" target="_blank" rel="noopener noreferrer">Efstathios Bakolas</a>.</div></div>
+        <div class="news-item"><div class="news-date">Jul 2025</div><div>Our papers <strong><a href="https://arxiv.org/abs/2504.04605" target="_blank">Nonlinear Robust Optimization for Planning and Control</a></strong> and 
+                    <strong><a href="https://arxiv.org/abs/2411.11211" target="_blank">Operator Splitting Covariance Steering for Safe Stochastic Nonlinear Control</a></strong> have been accepted at <strong>CDC 2025</strong>.</div></div>
       </div>
     </section>
 
@@ -171,10 +204,9 @@
           <a class="btn" data-role="abstract" href="#">ABSTRACT</a>
           <a class="btn" href="#">PDF</a>
         </div>
-        <details>
-          <summary>Abstract</summary>
+        <div class="abstract-box" hidden>
           <p>Quadratic programming (QP) forms a crucial foundation in optimization, encompassing a broad spectrum of domains and serving as the basis for more advanced algorithms. Consequently, as the scale and complexity of modern applications continue to grow, the development of efficient and reliable QP algorithms is becoming increasingly vital. In this context, this paper introduces a novel deep learning-aided distributed optimization architecture designed for tackling large-scale QP problems. First, we combine the state-of-the-art Operator Splitting QP (OSQP) method with a consensus approach to derive DistributedQP, a new method tailored for network-structured problems, with convergence guarantees to optimality. Subsequently, we unfold this optimizer into a deep learning framework, leading to DeepDistributedQP, which leverages learned policies to accelerate reaching to desired accuracy within a restricted amount of iterations. Our approach is also theoretically grounded through Probably Approximately Correct (PAC)-Bayes theory, providing generalization bounds on the expected optimality gap for unseen problems. The proposed framework, as well as its centralized version DeepQP, significantly outperform their standard optimization counterparts on a variety of tasks such as randomly generated problems, optimal control, linear regression, transportation networks and others. Notably, DeepDistributedQP demonstrates strong generalization by training on small problems and scaling to solve much larger ones (up to 50K variables and 150K constraints) using the same policy. Moreover, it achieves orders-of-magnitude improvements in wall-clock time compared to OSQP. The certifiable performance guarantees of our approach are also demonstrated, ensuring higher-quality solutions over traditional optimizers.</p>
-        </details>
+        </div>   
       </article>
 
       <article class="pub">
@@ -185,10 +217,9 @@
           <a class="btn" data-role="abstract" href="#">ABSTRACT</a>
           <a class="btn" href="#">PDF</a>
         </div>
-        <details>
-          <summary>Abstract</summary>
+        <div class="abstract-box" hidden>
           <p>This paper provides an overview, analysis, and comparison of second-order dynamic optimization algorithms, i.e., constrained Differential Dynamic Programming (DDP) and Sequential Quadratic Programming (SQP). Although a variety of these algorithms have been proposed and used successfully, there exists a gap in understanding the key differences and advantages, which we aim to provide in this work. For constrained DDP, we choose methods that incorporate nonlinear programming techniques to handle state and control constraints, including Augmented Lagrangian (AL), Interior Point, Primal-Dual Augmented Lagrangian (PDAL), and Alternating Direction Method of Multipliers (ADMM). Both DDP and SQP are provided in single- and multiple-shooting formulations, where constraints that arise from dynamics are encoded implicitly and explicitly, respectively. As a byproduct of the review, we propose a single-shooting PDAL DDP that has more favorable properties than the standard AL variant, such as the robustness to the growth of penalty parameters. We perform extensive numerical experiments on a variety of systems with increasing complexity to investigate the quality of the solutions, the levels of constraint violation, and the sensitivity of final solutions with respect to initialization, as well as targets. The results show that single-shooting PDAL DDP and multiple-shooting SQP are the most robust methods. For multiple-shooting formulation, both DDP and SQP can enjoy informed initial guesses, while the latter appears to be more advantageous in complex systems. It is also worth highlighting that DDP provides favorable computational complexity and feedback gains as a byproduct of optimization as is.</p>
-        </details>
+        </div> 
       </article>
 
       <article class="pub">
