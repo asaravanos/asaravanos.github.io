@@ -92,11 +92,17 @@
     footer { margin-top: 40px; color: var(--muted); font-size: 14px; border-top: 1px solid var(--border); padding-top: 18px; }
 
     /* Responsive */
+    .hero > div:last-child {
+      margin-top: 150px;
+    }
     @media (max-width: 860px) {
       .hero { grid-template-columns: 1fr; }
       .topbar { justify-content: center; }
       .news-item { grid-template-columns: 100px 1fr; }
       .portrait { max-width: 220px; }
+      .hero > div:last-child {
+        margin-top: 0;
+      }
     }
 
     strong, b {
@@ -158,9 +164,6 @@
     text-align: center;
   }
 
-    .hero > div:last-child {
-    margin-top: 160px; /* Adjust this value to align with "Hi, I'm a postdoctoral..." */
-}
   </style>
 </head>
 <body>
@@ -197,9 +200,9 @@
           <p>Contact: <span style="font-family:'JetBrains Mono', monospace;">asaravan [at] mit [dot] edu</span></p>
         </div>
       </div>
-    <div style="display:flex; justify-content:center;">
-      <img class="portrait" src="assets/img/prof_pic.jpg" alt="Portrait of Augustinos Saravanos" />
-    </div>
+      <div style="display:flex; justify-content:center;">
+        <img class="portrait" src="assets/img/prof_pic.jpg" alt="Portrait of Augustinos Saravanos" />
+      </div>
     </header>
 
     <hr class="sep" />
