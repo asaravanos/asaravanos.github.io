@@ -68,7 +68,7 @@
     .pubs-note { color: var(--muted); font-size: 14px; margin-bottom: 6px; }
     .pub { 
       display: grid; 
-      grid-template-columns: 180px 1fr; 
+      grid-template-columns: 190px 1fr; 
       gap: 16px; 
       padding: 16px 14px; 
       background: var(--card); 
@@ -83,14 +83,14 @@
       border-radius: 8px;
       border: 1px solid var(--border);
     }
-    .pub-title { font-weight: 600; font-size: 20px; margin: 0 0 4px; }
+    .pub-title { font-weight: 700; font-size: 20px; margin: 0 0 4px; }
     .pub-authors { margin: 0 0 6px; }
     .pub-venue {
         margin: 0 0 10px;
       }
       .venue-name {
-        color: #ae633a;
-        font-weight: 600;
+        color: #c05d2b;
+        font-weight: 650;
       }
       .author-me {
         color: #4d5bc9;
@@ -204,7 +204,7 @@
         <h1 class="title">Augustinos Saravanos</h1>
         <div class="subtitle">Postdoc at MIT</div>
         <div class="lead" style="margin-top:14px;">
-          <p>Hi, I’m a <b>postdoctoral associate</b> at <strong>MIT AeroAstro</strong>, working at the
+          <p>Hi, I'm a <b>postdoctoral associate</b> at <strong>MIT AeroAstro</strong>, working at the
                 <a href="https://aeroastro.mit.edu/realm/" target="_blank" rel="noopener noreferrer">REALM Lab</a>
                 with Prof. <a href="https://chuchu.mit.edu/" target="_blank" rel="noopener noreferrer">Chuchu Fan</a>.
               I received my <strong>PhD in Machine Learning</strong> at <strong>Georgia Tech</strong> in 2025, where I was advised by
@@ -241,7 +241,7 @@
                     <strong><a href="https://arxiv.org/abs/2508.11799" target="_blank">
                     Scaling Robust Optimization for Swarms: A Distributed Perspective</a></strong>
                     available on arXiv.</div></div>
-        <div class="news-item"><div class="news-date">Aug 2025</div><div>I have joined <strong>MIT</strong> as a <strong>postdoc</strong>! I’ll be working 
+        <div class="news-item"><div class="news-date">Aug 2025</div><div>I have joined <strong>MIT</strong> as a <strong>postdoc</strong>! I'll be working 
                 with Prof. <a href="https://chuchu.mit.edu/" target="_blank" rel="noopener noreferrer">Chuchu Fan</a> at the <a href="https://aeroastro.mit.edu/realm/" target="_blank" rel="noopener noreferrer">REALM Lab</a>.</div></div>
         <div class="news-item"><div class="news-date">Jul 2025</div><div>I defended my <strong>PhD thesis</strong> on
                     <strong><a href="https://repository.gatech.edu/entities/publication/ea27339d-e8cb-42d1-9180-571c809242bd" target="_blank" rel="noopener noreferrer">Distributed Optimization Architectures for Large-Scale Decision-Making</a></strong> at <strong>Georgia Tech</strong>! 
@@ -263,116 +263,124 @@
       <div class="pubs-note">* Equal contribution. See <a href="https://scholar.google.com/citations?user=6XP9s1MAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a> for full list of publications.</div>
 
       <article class="pub">
-      <img class="pub-img" src="assets/img/papers/deep_distributed_qp.png" alt="Paper visualization" />
+        <img class="pub-img" src="assets/img/papers/deep_distributed_qp.png" alt="Paper visualization" />
         <div>
-        <h3 class="pub-title">Deep Distributed Optimization for Large-Scale Quadratic Programming</h3>
-        <p class="pub-authors"><span class="author-me">A.D. Saravanos</span>, H. Kuperman, A. Oshin, A.T. Abdul, V. Pacelli and E.A. Theodorou</p>
-        <p class="pub-venue"><span class="venue-name">International Conference on Learning Representations (ICLR)</span>, 2025.</p>
-        <div class="btns">
-          <a class="btn" data-role="abstract" href="#">ABSTRACT</a>
-          <a class="btn" href="https://openreview.net/pdf?id=hzuumhfYSO">PDF</a>
-          <a class="btn" data-role="cite" href="#">CITE</a>
-        </div>
-        <div class="abstract-box" hidden>
-          <p>Quadratic programming (QP) forms a crucial foundation in optimization, encompassing a broad spectrum of domains and serving as the basis for more advanced algorithms. Consequently, as the scale and complexity of modern applications continue to grow, the development of efficient and reliable QP algorithms is becoming increasingly vital. In this context, this paper introduces a novel deep learning-aided distributed optimization architecture designed for tackling large-scale QP problems. First, we combine the state-of-the-art Operator Splitting QP (OSQP) method with a consensus approach to derive DistributedQP, a new method tailored for network-structured problems, with convergence guarantees to optimality. Subsequently, we unfold this optimizer into a deep learning framework, leading to DeepDistributedQP, which leverages learned policies to accelerate reaching to desired accuracy within a restricted amount of iterations. Our approach is also theoretically grounded through Probably Approximately Correct (PAC)-Bayes theory, providing generalization bounds on the expected optimality gap for unseen problems. The proposed framework, as well as its centralized version DeepQP, significantly outperform their standard optimization counterparts on a variety of tasks such as randomly generated problems, optimal control, linear regression, transportation networks and others. Notably, DeepDistributedQP demonstrates strong generalization by training on small problems and scaling to solve much larger ones (up to 50K variables and 150K constraints) using the same policy. Moreover, it achieves orders-of-magnitude improvements in wall-clock time compared to OSQP. The certifiable performance guarantees of our approach are also demonstrated, ensuring higher-quality solutions over traditional optimizers.</p>
-        </div>   
-        <div class="cite-box" hidden>
-          <pre>@inproceedings{saravanos2025deep,
+          <h3 class="pub-title">Deep Distributed Optimization for Large-Scale Quadratic Programming</h3>
+          <p class="pub-authors"><span class="author-me">A.D. Saravanos</span>, H. Kuperman, A. Oshin, A.T. Abdul, V. Pacelli and E.A. Theodorou</p>
+          <p class="pub-venue"><span class="venue-name">International Conference on Learning Representations (ICLR)</span>, 2025.</p>
+          <div class="btns">
+            <a class="btn" data-role="abstract" href="#">ABSTRACT</a>
+            <a class="btn" href="https://openreview.net/pdf?id=hzuumhfYSO">PDF</a>
+            <a class="btn" data-role="cite" href="#">CITE</a>
+          </div>
+          <div class="abstract-box" hidden>
+            <p>Quadratic programming (QP) forms a crucial foundation in optimization, encompassing a broad spectrum of domains and serving as the basis for more advanced algorithms. Consequently, as the scale and complexity of modern applications continue to grow, the development of efficient and reliable QP algorithms is becoming increasingly vital. In this context, this paper introduces a novel deep learning-aided distributed optimization architecture designed for tackling large-scale QP problems. First, we combine the state-of-the-art Operator Splitting QP (OSQP) method with a consensus approach to derive DistributedQP, a new method tailored for network-structured problems, with convergence guarantees to optimality. Subsequently, we unfold this optimizer into a deep learning framework, leading to DeepDistributedQP, which leverages learned policies to accelerate reaching to desired accuracy within a restricted amount of iterations. Our approach is also theoretically grounded through Probably Approximately Correct (PAC)-Bayes theory, providing generalization bounds on the expected optimality gap for unseen problems. The proposed framework, as well as its centralized version DeepQP, significantly outperform their standard optimization counterparts on a variety of tasks such as randomly generated problems, optimal control, linear regression, transportation networks and others. Notably, DeepDistributedQP demonstrates strong generalization by training on small problems and scaling to solve much larger ones (up to 50K variables and 150K constraints) using the same policy. Moreover, it achieves orders-of-magnitude improvements in wall-clock time compared to OSQP. The certifiable performance guarantees of our approach are also demonstrated, ensuring higher-quality solutions over traditional optimizers.</p>
+          </div>   
+          <div class="cite-box" hidden>
+            <pre>@inproceedings{saravanos2025deep,
   title={Deep Distributed Optimization for Large-Scale Quadratic Programming},
   author={Augustinos D Saravanos and Hunter Kuperman and Alex Oshin and Arshiya Taj Abdul and Vincent Pacelli and Evangelos Theodorou},
   booktitle={The Thirteenth International Conference on Learning Representations},
   year={2025},
   url={https://openreview.net/forum?id=hzuumhfYSO}
   }</pre>
-        </div>
+          </div>
         </div>   
       </article>
 
       <article class="pub">
         <img class="pub-img" src="assets/img/papers/distributed_robust_opt.png" alt="Paper visualization" />
         <div>
-        <h3 class="pub-title">Scaling Robust Optimization for Swarms: A Distributed Perspective</h3>
-        <p class="pub-authors">A.T. Abdul*, <span class="author-me">A.D. Saravanos*</span> and E.A. Theodorou</p>
-        <p class="pub-venue"><span class="venue-name">IEEE Transactions on Automatic Control (TAC)</span> - Under review, 2025.</p>
-        <div class="btns">
-          <a class="btn" data-role="abstract" href="#">ABSTRACT</a>
-          <a class="btn" href="https://arxiv.org/pdf/2508.11799">PDF</a>
-          <a class="btn" href="https://www.youtube.com/watch?v=Q5xghaqt4SQ">VIDEO</a>
-          <a class="btn" data-role="cite" href="#">CITE</a>
-        </div>
-        <div class="abstract-box" hidden>
-          <p>This article introduces a decentralized robust optimization framework for safe multi-agent control under uncertainty. Although stochastic noise has been the primary form of modeling uncertainty in such systems, these formulations might fall short in addressing uncertainties that are deterministic in nature or simply lack probabilistic data. To ensure safety under such scenarios, we employ the concept of robust constraints that must hold for all possible uncertainty realizations lying inside a bounded set. Nevertheless, standard robust optimization approaches become intractable due to the large number or non-convexity of the constraints involved in safe multi-agent control. To address this, we introduce novel robust reformulations that significantly reduce complexity without compromising safety. The applicability of the framework is further broadened to address both deterministic and stochastic uncertainties by incorporating robust chance constraints and distribution steering techniques. To achieve scalability, we derive a distributed approach based on the Alternating Direction Method of Multipliers (ADMM), supported by a convergence study that accounts for the underlying non-convexity. In addition, computational complexity bounds highlighting the efficiency of the proposed frameworks against standard approaches are presented. Finally, the robustness and scalability of the framework is demonstrated through extensive simulation results across diverse scenarios, including environments with nonconvex obstacles and up to 246 agents.</p>
-        </div>   
-        <div class="cite-box" hidden>
-          <pre>@article{abdul2025scaling,
+          <h3 class="pub-title">Scaling Robust Optimization for Swarms: A Distributed Perspective</h3>
+          <p class="pub-authors">A.T. Abdul*, <span class="author-me">A.D. Saravanos*</span> and E.A. Theodorou</p>
+          <p class="pub-venue"><span class="venue-name">IEEE Transactions on Automatic Control (TAC)</span> - Under review, 2025.</p>
+          <div class="btns">
+            <a class="btn" data-role="abstract" href="#">ABSTRACT</a>
+            <a class="btn" href="https://arxiv.org/pdf/2508.11799">PDF</a>
+            <a class="btn" href="https://www.youtube.com/watch?v=Q5xghaqt4SQ">VIDEO</a>
+            <a class="btn" data-role="cite" href="#">CITE</a>
+          </div>
+          <div class="abstract-box" hidden>
+            <p>This article introduces a decentralized robust optimization framework for safe multi-agent control under uncertainty. Although stochastic noise has been the primary form of modeling uncertainty in such systems, these formulations might fall short in addressing uncertainties that are deterministic in nature or simply lack probabilistic data. To ensure safety under such scenarios, we employ the concept of robust constraints that must hold for all possible uncertainty realizations lying inside a bounded set. Nevertheless, standard robust optimization approaches become intractable due to the large number or non-convexity of the constraints involved in safe multi-agent control. To address this, we introduce novel robust reformulations that significantly reduce complexity without compromising safety. The applicability of the framework is further broadened to address both deterministic and stochastic uncertainties by incorporating robust chance constraints and distribution steering techniques. To achieve scalability, we derive a distributed approach based on the Alternating Direction Method of Multipliers (ADMM), supported by a convergence study that accounts for the underlying non-convexity. In addition, computational complexity bounds highlighting the efficiency of the proposed frameworks against standard approaches are presented. Finally, the robustness and scalability of the framework is demonstrated through extensive simulation results across diverse scenarios, including environments with nonconvex obstacles and up to 246 agents.</p>
+          </div>   
+          <div class="cite-box" hidden>
+            <pre>@article{abdul2025scaling,
   title={Scaling Robust Optimization for Swarms: A Distributed Perspective},
   author={Abdul, Arshiya Taj and Saravanos, Augustinos D and Theodorou, Evangelos A},
   journal={arXiv preprint arXiv:2508.11799},
   year={2025}
 }</pre>
-      </div>
-      </div>
+          </div>
+        </div>
       </article>
 
       <article class="pub">
-        <h3 class="pub-title">Second-Order Constrained Dynamic Optimization</h3>
-        <p class="pub-authors">Y. Aoyama, O. So, <span class="author-me">A.D. Saravanos</span> and E.A. Theodorou</p>
-        <p class="pub-venue"><span class="venue-name">International Journal of Robotics Research (IJRR)</span> - Under minor revision, 2025.</p>
-        <div class="btns">
-          <a class="btn" data-role="abstract" href="#">ABSTRACT</a>
-          <a class="btn" href="https://arxiv.org/pdf/2409.11649">PDF</a>
-          <a class="btn" data-role="cite" href="#">CITE</a>
-        </div>
-        <div class="abstract-box" hidden>
-          <p>This paper provides an overview, analysis, and comparison of second-order dynamic optimization algorithms, i.e., constrained Differential Dynamic Programming (DDP) and Sequential Quadratic Programming (SQP). Although a variety of these algorithms have been proposed and used successfully, there exists a gap in understanding the key differences and advantages, which we aim to provide in this work. For constrained DDP, we choose methods that incorporate nonlinear programming techniques to handle state and control constraints, including Augmented Lagrangian (AL), Interior Point, Primal-Dual Augmented Lagrangian (PDAL), and Alternating Direction Method of Multipliers (ADMM). Both DDP and SQP are provided in single- and multiple-shooting formulations, where constraints that arise from dynamics are encoded implicitly and explicitly, respectively. As a byproduct of the review, we propose a single-shooting PDAL DDP that has more favorable properties than the standard AL variant, such as the robustness to the growth of penalty parameters. We perform extensive numerical experiments on a variety of systems with increasing complexity to investigate the quality of the solutions, the levels of constraint violation, and the sensitivity of final solutions with respect to initialization, as well as targets. The results show that single-shooting PDAL DDP and multiple-shooting SQP are the most robust methods. For multiple-shooting formulation, both DDP and SQP can enjoy informed initial guesses, while the latter appears to be more advantageous in complex systems. It is also worth highlighting that DDP provides favorable computational complexity and feedback gains as a byproduct of optimization as is.</p>
-        </div> 
-        <div class="cite-box" hidden>
-          <pre>@article{aoyama2024second,
+        <img class="pub-img" src="assets/img/papers/second_order_dyn_opt.png" alt="Paper visualization" />
+        <div>
+          <h3 class="pub-title">Second-Order Constrained Dynamic Optimization</h3>
+          <p class="pub-authors">Y. Aoyama, O. So, <span class="author-me">A.D. Saravanos</span> and E.A. Theodorou</p>
+          <p class="pub-venue"><span class="venue-name">International Journal of Robotics Research (IJRR)</span> - Under minor revision, 2025.</p>
+          <div class="btns">
+            <a class="btn" data-role="abstract" href="#">ABSTRACT</a>
+            <a class="btn" href="https://arxiv.org/pdf/2409.11649">PDF</a>
+            <a class="btn" data-role="cite" href="#">CITE</a>
+          </div>
+          <div class="abstract-box" hidden>
+            <p>This paper provides an overview, analysis, and comparison of second-order dynamic optimization algorithms, i.e., constrained Differential Dynamic Programming (DDP) and Sequential Quadratic Programming (SQP). Although a variety of these algorithms have been proposed and used successfully, there exists a gap in understanding the key differences and advantages, which we aim to provide in this work. For constrained DDP, we choose methods that incorporate nonlinear programming techniques to handle state and control constraints, including Augmented Lagrangian (AL), Interior Point, Primal-Dual Augmented Lagrangian (PDAL), and Alternating Direction Method of Multipliers (ADMM). Both DDP and SQP are provided in single- and multiple-shooting formulations, where constraints that arise from dynamics are encoded implicitly and explicitly, respectively. As a byproduct of the review, we propose a single-shooting PDAL DDP that has more favorable properties than the standard AL variant, such as the robustness to the growth of penalty parameters. We perform extensive numerical experiments on a variety of systems with increasing complexity to investigate the quality of the solutions, the levels of constraint violation, and the sensitivity of final solutions with respect to initialization, as well as targets. The results show that single-shooting PDAL DDP and multiple-shooting SQP are the most robust methods. For multiple-shooting formulation, both DDP and SQP can enjoy informed initial guesses, while the latter appears to be more advantageous in complex systems. It is also worth highlighting that DDP provides favorable computational complexity and feedback gains as a byproduct of optimization as is.</p>
+          </div> 
+          <div class="cite-box" hidden>
+            <pre>@article{aoyama2024second,
   title={Second-order constrained dynamic optimization},
   author={Aoyama, Yuichiro and So, Oswin and Saravanos, Augustinos D and Theodorou, Evangelos A},
   journal={arXiv preprint arXiv:2409.11649},
   year={2024}
   }</pre>
+          </div>
         </div>  
       </article>
 
       <article class="pub">
-        <h3 class="pub-title">Momentum Multi-Marginal Schrödinger Bridge Matching</h3>
-        <p class="pub-authors">P. Theodoropoulos, <span class="author-me">A.D. Saravanos</span>, E.A. Theodorou and G.H. Liu</p>
-        <p class="pub-venue"><span class="venue-name">Neural Information Processing Systems (NeurIPS)</span>, 2025.</p>
-        <div class="btns">
-          <a class="btn" data-role="abstract" href="#">ABSTRACT</a>
-          <a class="btn" href="https://arxiv.org/pdf/2506.10168">PDF</a>
-          <a class="btn" data-role="cite" href="#">CITE</a>
-        </div>
-        <div class="abstract-box" hidden>
-          <p>Understanding complex systems by inferring trajectories from sparse sample snapshots is a fundamental challenge in a wide range of domains, e.g., single-cell biology, meteorology, and economics. Despite advancements in Bridge and Flow matching frameworks, current methodologies rely on pairwise interpolation between adjacent snapshots. This hinders their ability to capture long-range temporal dependencies and potentially affects the coherence of the inferred trajectories. To address these issues, we introduce <strong>Momentum Multi-Marginal Schrödinger Bridge Matching (3MSBM)</strong>, a novel matching framework that learns smooth measure-valued splines for stochastic systems that satisfy multiple positional constraints. This is achieved by lifting the dynamics to phase space and generalizing stochastic bridges to be conditioned on several points, forming a multi-marginal conditional stochastic optimal control problem. The underlying dynamics are then learned by minimizing a variational objective, having fixed the path induced by the multi-marginal conditional bridge. As a matching approach, 3MSBM learns transport maps that preserve intermediate marginals throughout training, significantly improving convergence and scalability. Extensive experimentation in a series of real-world applications validates the superior performance of 3MSBM compared to existing methods in capturing complex dynamics with temporal dependencies, opening new avenues for training matching frameworks in multi-marginal settings.</p>
-        </div>
-        <div class="cite-box" hidden>
-          <pre>@article{theodoropoulos2025momentum,
+        <img class="pub-img" src="assets/img/papers/threemsbm.png" alt="Paper visualization" />
+        <div>
+          <h3 class="pub-title">Momentum Multi-Marginal Schrödinger Bridge Matching</h3>
+          <p class="pub-authors">P. Theodoropoulos, <span class="author-me">A.D. Saravanos</span>, E.A. Theodorou and G.H. Liu</p>
+          <p class="pub-venue"><span class="venue-name">Neural Information Processing Systems (NeurIPS)</span>, 2025.</p>
+          <div class="btns">
+            <a class="btn" data-role="abstract" href="#">ABSTRACT</a>
+            <a class="btn" href="https://arxiv.org/pdf/2506.10168">PDF</a>
+            <a class="btn" data-role="cite" href="#">CITE</a>
+          </div>
+          <div class="abstract-box" hidden>
+            <p>Understanding complex systems by inferring trajectories from sparse sample snapshots is a fundamental challenge in a wide range of domains, e.g., single-cell biology, meteorology, and economics. Despite advancements in Bridge and Flow matching frameworks, current methodologies rely on pairwise interpolation between adjacent snapshots. This hinders their ability to capture long-range temporal dependencies and potentially affects the coherence of the inferred trajectories. To address these issues, we introduce <strong>Momentum Multi-Marginal Schrödinger Bridge Matching (3MSBM)</strong>, a novel matching framework that learns smooth measure-valued splines for stochastic systems that satisfy multiple positional constraints. This is achieved by lifting the dynamics to phase space and generalizing stochastic bridges to be conditioned on several points, forming a multi-marginal conditional stochastic optimal control problem. The underlying dynamics are then learned by minimizing a variational objective, having fixed the path induced by the multi-marginal conditional bridge. As a matching approach, 3MSBM learns transport maps that preserve intermediate marginals throughout training, significantly improving convergence and scalability. Extensive experimentation in a series of real-world applications validates the superior performance of 3MSBM compared to existing methods in capturing complex dynamics with temporal dependencies, opening new avenues for training matching frameworks in multi-marginal settings.</p>
+          </div>
+          <div class="cite-box" hidden>
+            <pre>@article{theodoropoulos2025momentum,
   title={Momentum Multi-Marginal Schr$\backslash$" odinger Bridge Matching},
   author={Theodoropoulos, Panagiotis and Saravanos, Augustinos D and Theodorou, Evangelos A and Liu, Guan-Horng},
   journal={arXiv preprint arXiv:2506.10168},
   year={2025}
 }</pre>
+          </div>
         </div>    
       </article>
 
       <article class="pub">
-        <h3 class="pub-title">Distributed Model Predictive Covariance Steering</h3>
-        <p class="pub-authors"><span class="author-me">A.D. Saravanos</span>, I.M. Balci, E. Bakolas, and E.A. Theodorou</p>
-         <p class="pub-venue"><span class="venue-name">IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)</span>, 2024.</p>
-        <div class="btns">
-          <a class="btn" data-role="abstract" href="#">ABSTRACT</a>
-          <a class="btn" href="https://arxiv.org/pdf/2212.00398">PDF</a>
-          <a class="btn" href="https://www.youtube.com/watch?v=tzWqOzuj2kQ">VIDEO</a>
-          <a class="btn" data-role="cite" href="#">CITE</a>
-        </div>
-        <div class="abstract-box" hidden>
-          <p>This paper proposes Distributed Model Predictive Covariance Steering (DiMPCS) for multi-agent control under stochastic uncertainty. The scope of our approach is to blend covariance steering theory, distributed optimization and model predictive control (MPC) into a single framework that is safe, scalable and decentralized. Initially, we pose a problem formulation that uses the Wasserstein distance to steer the state distributions of a multi-agent system to desired targets, and probabilistic constraints to ensure safety. We then transform this problem into a finite-dimensional optimization one by utilizing a disturbance feedback policy parametrization for covariance steering and a tractable approximation of the safety constraints. To solve the latter problem, we derive a decentralized consensus-based algorithm using the Alternating Direction Method of Multipliers. This method is then extended to a receding horizon form, which yields the proposed DiMPCS algorithm. Simulation experiments on a variety of multi-robot tasks with up to hundreds of robots demonstrate the effectiveness of DiMPCS. The superior scalability and performance of the proposed method is also highlighted through a comparison against related stochastic MPC approaches. Finally, hardware results on a multi-robot platform also verify the applicability of DiMPCS on real systems.</p>
-        </div>
-        <div class="cite-box" hidden>
-          <pre>@inproceedings{saravanos2024distributed,
+        <img class="pub-img" src="assets/img/papers/dmpcs.png" alt="Paper visualization" />
+        <div>
+          <h3 class="pub-title">Distributed Model Predictive Covariance Steering</h3>
+          <p class="pub-authors"><span class="author-me">A.D. Saravanos</span>, I.M. Balci, E. Bakolas, and E.A. Theodorou</p>
+          <p class="pub-venue"><span class="venue-name">IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)</span>, 2024.</p>
+          <div class="btns">
+            <a class="btn" data-role="abstract" href="#">ABSTRACT</a>
+            <a class="btn" href="https://arxiv.org/pdf/2212.00398">PDF</a>
+            <a class="btn" href="https://www.youtube.com/watch?v=tzWqOzuj2kQ">VIDEO</a>
+            <a class="btn" data-role="cite" href="#">CITE</a>
+          </div>
+          <div class="abstract-box" hidden>
+            <p>This paper proposes Distributed Model Predictive Covariance Steering (DiMPCS) for multi-agent control under stochastic uncertainty. The scope of our approach is to blend covariance steering theory, distributed optimization and model predictive control (MPC) into a single framework that is safe, scalable and decentralized. Initially, we pose a problem formulation that uses the Wasserstein distance to steer the state distributions of a multi-agent system to desired targets, and probabilistic constraints to ensure safety. We then transform this problem into a finite-dimensional optimization one by utilizing a disturbance feedback policy parametrization for covariance steering and a tractable approximation of the safety constraints. To solve the latter problem, we derive a decentralized consensus-based algorithm using the Alternating Direction Method of Multipliers. This method is then extended to a receding horizon form, which yields the proposed DiMPCS algorithm. Simulation experiments on a variety of multi-robot tasks with up to hundreds of robots demonstrate the effectiveness of DiMPCS. The superior scalability and performance of the proposed method is also highlighted through a comparison against related stochastic MPC approaches. Finally, hardware results on a multi-robot platform also verify the applicability of DiMPCS on real systems.</p>
+          </div>
+          <div class="cite-box" hidden>
+            <pre>@inproceedings{saravanos2024distributed,
   author={Saravanos, Augustinos D. and Balci, Isin M. and Bakolas, Efstathios and Theodorou, Evangelos A.},
   booktitle={2024 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)}, 
   title={Distributed Model Predictive Covariance Steering}, 
@@ -383,24 +391,27 @@
   keywords={Uncertainty;Scalability;Stochastic processes;Transforms;Predictive models;Approximation algorithms;Probabilistic logic;Hardware;Safety;Optimization},
   doi={10.1109/IROS58592.2024.10802104}
 }</pre>   
+          </div>
         </div>
       </article>
 
       <article class="pub">
-        <h3 class="pub-title">Distributed Differential Dynamic Programming Architectures for Large-Scale Multi-Agent Control</h3>
-        <p class="pub-authors"><span class="author-me">A.D. Saravanos</span>, Y. Aoyama, H. Zhu, and E. A. Theodorou</p>
-        <p class="pub-venue"><span class="venue-name">IEEE Transactions on Robotics (T-RO)</span>, 2023.</p>
-        <div class="btns">
-          <a class="btn" data-role="abstract" href="#">ABSTRACT</a>
-          <a class="btn" href="https://arxiv.org/pdf/2207.13255">PDF</a>
-          <a class="btn" href="https://www.youtube.com/watch?v=tluvENcWldw">VIDEO</a>
-          <a class="btn" data-role="cite" href="#">CITE</a>
-        </div>
-        <div class="abstract-box" hidden>
-          <p>In this paper, we propose two novel decentralized optimization frameworks for multi-agent nonlinear optimal control problems in robotics. The aim of this work is to suggest architectures that inherit the computational efficiency and scalability of Differential Dynamic Programming (DDP) and the distributed nature of the Alternating Direction Method of Multipliers (ADMM). In this direction, two frameworks are introduced. The first one called Nested Distributed DDP (ND-DDP), is a three-level architecture which employs ADMM for enforcing a consensus between all agents, an Augmented Lagrangian layer for satisfying local constraints and DDP as each agent’s optimizer. In the second approach, both consensus and local constraints are handled with ADMM, yielding a two-level architecture called Merged Distributed DDP (MD-DDP), which further reduces computational complexity. Both frameworks are fully decentralized since all computations are parallelizable among the agents and only local communication is necessary. Simulation results that scale up to thousands of vehicles and hundreds of drones verify the effectiveness of the methods. Superior scalability to large-scale systems against centralized DDP and centralized/decentralized sequential quadratic programming is also illustrated. Finally, hardware experiments on a multi-robot platform demonstrate the applicability of the proposed algorithms, while highlighting the importance of optimizing for feedback policies to increase robustness against uncertainty. A video with all results is available here.</p>
-        </div>     
-        <div class="cite-box" hidden>
-          <pre>@article{saravanos2023distributed_differential,
+        <img class="pub-img" src="assets/img/papers/distributed_ddp.png" alt="Paper visualization" />
+        <div>
+          <h3 class="pub-title">Distributed Differential Dynamic Programming Architectures for Large-Scale Multi-Agent Control</h3>
+          <p class="pub-authors"><span class="author-me">A.D. Saravanos</span>, Y. Aoyama, H. Zhu, and E. A. Theodorou</p>
+          <p class="pub-venue"><span class="venue-name">IEEE Transactions on Robotics (T-RO)</span>, 2023.</p>
+          <div class="btns">
+            <a class="btn" data-role="abstract" href="#">ABSTRACT</a>
+            <a class="btn" href="https://arxiv.org/pdf/2207.13255">PDF</a>
+            <a class="btn" href="https://www.youtube.com/watch?v=tluvENcWldw">VIDEO</a>
+            <a class="btn" data-role="cite" href="#">CITE</a>
+          </div>
+          <div class="abstract-box" hidden>
+            <p>In this paper, we propose two novel decentralized optimization frameworks for multi-agent nonlinear optimal control problems in robotics. The aim of this work is to suggest architectures that inherit the computational efficiency and scalability of Differential Dynamic Programming (DDP) and the distributed nature of the Alternating Direction Method of Multipliers (ADMM). In this direction, two frameworks are introduced. The first one called Nested Distributed DDP (ND-DDP), is a three-level architecture which employs ADMM for enforcing a consensus between all agents, an Augmented Lagrangian layer for satisfying local constraints and DDP as each agent's optimizer. In the second approach, both consensus and local constraints are handled with ADMM, yielding a two-level architecture called Merged Distributed DDP (MD-DDP), which further reduces computational complexity. Both frameworks are fully decentralized since all computations are parallelizable among the agents and only local communication is necessary. Simulation results that scale up to thousands of vehicles and hundreds of drones verify the effectiveness of the methods. Superior scalability to large-scale systems against centralized DDP and centralized/decentralized sequential quadratic programming is also illustrated. Finally, hardware experiments on a multi-robot platform demonstrate the applicability of the proposed algorithms, while highlighting the importance of optimizing for feedback policies to increase robustness against uncertainty. A video with all results is available here.</p>
+          </div>     
+          <div class="cite-box" hidden>
+            <pre>@article{saravanos2023distributed_differential,
   author={Saravanos, Augustinos D. and Aoyama, Yuichiro and Zhu, Hongchang and Theodorou, Evangelos A.},
   journal={IEEE Transactions on Robotics}, 
   title={Distributed Differential Dynamic Programming Architectures for Large-Scale Multiagent Control}, 
@@ -411,24 +422,27 @@
   keywords={Optimal control;Scalability;Multi-robot systems;Heuristic algorithms;Dynamic programming;Convex functions;Computer architecture;Distributed robot systems;multirobot systems;optimization and optimal control;swarms},
   doi={10.1109/TRO.2023.3319894}
 }</pre>   
+          </div>
         </div>
       </article>
 
       <article class="pub">
-        <h3 class="pub-title">Distributed Hierarchical Distribution Control for Very-Large-Scale Clustered Multi-Agent Systems</h3>
-        <p class="pub-authors"><span class="author-me">A.D. Saravanos</span>, Y. Li and E.A. Theodorou</p>
-        <p class="pub-venue"><span class="venue-name">Robotics: Science and Systems (RSS)</span>, 2023.</p>
-        <div class="btns">
-          <a class="btn" data-role="abstract" href="#">ABSTRACT</a>
-          <a class="btn" href="https://www.roboticsproceedings.org/rss19/p110.pdf">PDF</a>
-          <a class="btn" href="https://www.youtube.com/watch?v=0QPyR4bD2q0">VIDEO</a>
-          <a class="btn" data-role="cite" href="#">CITE</a>
-        </div>
-        <div class="abstract-box" hidden>
-    <p>As the scale and complexity of multi-agent robotic systems are subject to a continuous increase, this paper considers a class of systems labeled as Very-Large-Scale Multi-Agent Systems (VLMAS) with dimensionality that can scale up to the order of millions of agents. In particular, we consider the problem of steering the state distributions of all agents of a VLMAS to prescribed target distributions while satisfying probabilistic safety guarantees. Based on the key assumption that such systems often admit a multi-level hierarchical clustered structure - where the agents are organized into cliques of different levels - we associate the control of such cliques with the control of distributions, and introduce the Distributed Hierarchical Distribution Control (DHDC) framework. The proposed approach consists of two sub-frameworks. The first one, Distributed Hierarchical Distribution Estimation (DHDE), is a bottom-up hierarchical decentralized algorithm which links the initial and target configurations of the cliques of all levels with suitable Gaussian distributions. The second part, Distributed Hierarchical Distribution Steering (DHDS), is a top-down hierarchical distributed method that steers the distributions of all cliques and agents from the initial to the targets ones assigned by DHDE. Simulation results that scale up to two million agents demonstrate the effectiveness and scalability of the proposed framework. The increased computational efficiency and safety performance of DHDC against related methods is also illustrated. The results of this work indicate the importance of hierarchical distribution control approaches towards achieving safe and scalable solutions for the control of VLMAS.</p>
-      </div>     
-        <div class="cite-box" hidden>
-          <pre>@inproceedings{saravanos2023distributed_hierarchical, 
+        <img class="pub-img" src="assets/img/papers/hierarchical.png" alt="Paper visualization" />
+        <div>
+          <h3 class="pub-title">Distributed Hierarchical Distribution Control for Very-Large-Scale Clustered Multi-Agent Systems</h3>
+          <p class="pub-authors"><span class="author-me">A.D. Saravanos</span>, Y. Li and E.A. Theodorou</p>
+          <p class="pub-venue"><span class="venue-name">Robotics: Science and Systems (RSS)</span>, 2023.</p>
+          <div class="btns">
+            <a class="btn" data-role="abstract" href="#">ABSTRACT</a>
+            <a class="btn" href="https://www.roboticsproceedings.org/rss19/p110.pdf">PDF</a>
+            <a class="btn" href="https://www.youtube.com/watch?v=0QPyR4bD2q0">VIDEO</a>
+            <a class="btn" data-role="cite" href="#">CITE</a>
+          </div>
+          <div class="abstract-box" hidden>
+            <p>As the scale and complexity of multi-agent robotic systems are subject to a continuous increase, this paper considers a class of systems labeled as Very-Large-Scale Multi-Agent Systems (VLMAS) with dimensionality that can scale up to the order of millions of agents. In particular, we consider the problem of steering the state distributions of all agents of a VLMAS to prescribed target distributions while satisfying probabilistic safety guarantees. Based on the key assumption that such systems often admit a multi-level hierarchical clustered structure - where the agents are organized into cliques of different levels - we associate the control of such cliques with the control of distributions, and introduce the Distributed Hierarchical Distribution Control (DHDC) framework. The proposed approach consists of two sub-frameworks. The first one, Distributed Hierarchical Distribution Estimation (DHDE), is a bottom-up hierarchical decentralized algorithm which links the initial and target configurations of the cliques of all levels with suitable Gaussian distributions. The second part, Distributed Hierarchical Distribution Steering (DHDS), is a top-down hierarchical distributed method that steers the distributions of all cliques and agents from the initial to the targets ones assigned by DHDE. Simulation results that scale up to two million agents demonstrate the effectiveness and scalability of the proposed framework. The increased computational efficiency and safety performance of DHDC against related methods is also illustrated. The results of this work indicate the importance of hierarchical distribution control approaches towards achieving safe and scalable solutions for the control of VLMAS.</p>
+          </div>     
+          <div class="cite-box" hidden>
+            <pre>@inproceedings{saravanos2023distributed_hierarchical, 
   author={Augustinos D Saravanos AND Yihui Li AND Evangelos Theodorou}, 
   title={{Distributed Hierarchical Distribution Control for Very-Large-Scale Clustered Multi-Agent Systems}}, 
   booktitle={Proceedings of Robotics: Science and Systems}, 
@@ -437,24 +451,27 @@
   month={July}, 
   doi={10.15607/RSS.2023.XIX.110} 
 }</pre>   
+          </div>
         </div>
       </article>
 
       <article class="pub">
-        <h3 class="pub-title">Decentralized Safe Multi-agent Stochastic Optimal Control using Deep FBSDEs and ADMM</h3>
-        <p class="pub-authors">M.A. Pereira*,  <span class="author-me">A.D. Saravanos*</span>, O. So, and E.A. Theodorou</p>
-        <p class="pub-venue"><span class="venue-name">Robotics: Science and Systems (RSS)</span>, 2022.</p>
-        <div class="btns">
-          <a class="btn" data-role="abstract" href="#">ABSTRACT</a>
-          <a class="btn" href="https://www.roboticsproceedings.org/rss18/p055.pdf">PDF</a>
-          <a class="btn" href="https://www.youtube.com/watch?v=qjPLUlaxJos">VIDEO</a>
-          <a class="btn" data-role="cite" href="#">CITE</a>
-        </div>
+        <img class="pub-img" src="assets/img/papers/deep_fbsdes.png" alt="Paper visualization" />
+        <div>
+          <h3 class="pub-title">Decentralized Safe Multi-agent Stochastic Optimal Control using Deep FBSDEs and ADMM</h3>
+          <p class="pub-authors">M.A. Pereira*,  <span class="author-me">A.D. Saravanos*</span>, O. So, and E.A. Theodorou</p>
+          <p class="pub-venue"><span class="venue-name">Robotics: Science and Systems (RSS)</span>, 2022.</p>
+          <div class="btns">
+            <a class="btn" data-role="abstract" href="#">ABSTRACT</a>
+            <a class="btn" href="https://www.roboticsproceedings.org/rss18/p055.pdf">PDF</a>
+            <a class="btn" href="https://www.youtube.com/watch?v=qjPLUlaxJos">VIDEO</a>
+            <a class="btn" data-role="cite" href="#">CITE</a>
+          </div>
           <div class="abstract-box" hidden>
-    <p>In this work, we propose a novel safe and scalable decentralized solution for multi-agent control in the presence of stochastic disturbances. Safety is mathematically encoded using stochastic control barrier functions and safe controls are computed by solving quadratic programs. Decentralization is achieved by augmenting to each agent's optimization variables, copy variables, for its neighbors. This allows us to decouple the centralized multi-agent optimization problem. However, to ensure safety, neighboring agents must agree on what is safe for both of us, creating a need for consensus. To enable safe consensus solutions, we incorporate an ADMM-based approach. Specifically, we propose a Merged Consensus ADMM-OSQP implicit neural network layer, that solves a mini-batch of both, local quadratic programs as well as the overall consensus problem, as a single optimization problem. This layer is embedded within a Deep Forward-Backward Stochastic Differential Equations (FBSDEs) network architecture at every time step, to facilitate end-to-end differentiable, safe and decentralized stochastic optimal control. The efficacy of the proposed approach is demonstrated on several challenging multi-robot tasks in simulation. By imposing collision avoidance constraints, the safe operation of all agents is ensured during the entire training process. We also demonstrate superior scalability in terms of computational and memory savings as compared to a centralized approach.</p>      
-  </div>     
-        <div class="cite-box" hidden>
-          <pre>@inproceedings{pereira2022decentralized, 
+            <p>In this work, we propose a novel safe and scalable decentralized solution for multi-agent control in the presence of stochastic disturbances. Safety is mathematically encoded using stochastic control barrier functions and safe controls are computed by solving quadratic programs. Decentralization is achieved by augmenting to each agent's optimization variables, copy variables, for its neighbors. This allows us to decouple the centralized multi-agent optimization problem. However, to ensure safety, neighboring agents must agree on what is safe for both of us, creating a need for consensus. To enable safe consensus solutions, we incorporate an ADMM-based approach. Specifically, we propose a Merged Consensus ADMM-OSQP implicit neural network layer, that solves a mini-batch of both, local quadratic programs as well as the overall consensus problem, as a single optimization problem. This layer is embedded within a Deep Forward-Backward Stochastic Differential Equations (FBSDEs) network architecture at every time step, to facilitate end-to-end differentiable, safe and decentralized stochastic optimal control. The efficacy of the proposed approach is demonstrated on several challenging multi-robot tasks in simulation. By imposing collision avoidance constraints, the safe operation of all agents is ensured during the entire training process. We also demonstrate superior scalability in terms of computational and memory savings as compared to a centralized approach.</p>      
+          </div>     
+          <div class="cite-box" hidden>
+            <pre>@inproceedings{pereira2022decentralized, 
   author={{Marcus A} Pereira AND {Augustinos D} Saravanos AND Oswin So AND {Evangelos A.} Theodorou}, 
   title={{Decentralized Safe Multi-agent Stochastic Optimal Control using Deep FBSDEs and ADMM}}, 
   booktitle={Proceedings of Robotics: Science and Systems}, 
@@ -463,24 +480,27 @@
   month={June}, 
   doi={10.15607/RSS.2022.XVIII.055} 
 }</pre>   
+          </div>
         </div>
-  </article>
+      </article>
 
       <article class="pub">
-        <h3 class="pub-title">Distributed Covariance Steering with Consensus ADMM for Stochastic Multi-Agent Systems</h3>
-        <p class="pub-authors"><span class="author-me">A.D. Saravanos</span>, A. Tsolovikos, E. Bakolas, and E.A. Theodorou</p>
-        <p class="pub-venue"><span class="venue-name">Robotics: Science and Systems (RSS)</span>, 2021.</p>
-        <div class="btns">
-          <a class="btn" data-role="abstract" href="#">ABSTRACT</a>
-          <a class="btn" href="https://www.roboticsproceedings.org/rss17/p075.pdf">PDF</a>
-          <a class="btn" href="https://www.youtube.com/watch?v=RiLQ2P1WXHQ">VIDEO</a>
-          <a class="btn" data-role="cite" href="#">CITE</a>
-        </div>
-      <div class="abstract-box" hidden>
-    <p>In this paper, we address the problem of steering a team of agents under stochastic linear dynamics to prescribed final state means and covariances. The agents operate in a common environment where inter-agent constraints may also be present. In order for our method to be scalable to large-scale systems and computationally efficient, we approach the problem in a distributed control framework using the Alternating Direction Method of Multipliers (ADMM). Each agent solves its own covariance steering problem in parallel, while additional copy variables for its closest neighbors are introduced to ensure that the inter-agent constraints will be satisfied. The inclusion of these additional variables creates a requirement for consensus between original and copy variables that involve the same agent. For this reason, we employ a variation of ADMM for consensus optimization. Simulation results on multi-vehicle systems under uncertainty with collision avoidance constraints illustrate the effectiveness of our algorithm. The substantially improved scalability of our distributed approach with respect to the number of agents is also demonstrated, in comparison with an equivalent centralized scheme.</p>
-      </div>     
-        <div class="cite-box" hidden>
-          <pre>@inproceedings{saravanos2021distributed, 
+        <img class="pub-img" src="assets/img/papers/distributed_cs.png" alt="Paper visualization" />
+        <div>
+          <h3 class="pub-title">Distributed Covariance Steering with Consensus ADMM for Stochastic Multi-Agent Systems</h3>
+          <p class="pub-authors"><span class="author-me">A.D. Saravanos</span>, A. Tsolovikos, E. Bakolas, and E.A. Theodorou</p>
+          <p class="pub-venue"><span class="venue-name">Robotics: Science and Systems (RSS)</span>, 2021.</p>
+          <div class="btns">
+            <a class="btn" data-role="abstract" href="#">ABSTRACT</a>
+            <a class="btn" href="https://www.roboticsproceedings.org/rss17/p075.pdf">PDF</a>
+            <a class="btn" href="https://www.youtube.com/watch?v=RiLQ2P1WXHQ">VIDEO</a>
+            <a class="btn" data-role="cite" href="#">CITE</a>
+          </div>
+          <div class="abstract-box" hidden>
+            <p>In this paper, we address the problem of steering a team of agents under stochastic linear dynamics to prescribed final state means and covariances. The agents operate in a common environment where inter-agent constraints may also be present. In order for our method to be scalable to large-scale systems and computationally efficient, we approach the problem in a distributed control framework using the Alternating Direction Method of Multipliers (ADMM). Each agent solves its own covariance steering problem in parallel, while additional copy variables for its closest neighbors are introduced to ensure that the inter-agent constraints will be satisfied. The inclusion of these additional variables creates a requirement for consensus between original and copy variables that involve the same agent. For this reason, we employ a variation of ADMM for consensus optimization. Simulation results on multi-vehicle systems under uncertainty with collision avoidance constraints illustrate the effectiveness of our algorithm. The substantially improved scalability of our distributed approach with respect to the number of agents is also demonstrated, in comparison with an equivalent centralized scheme.</p>
+          </div>     
+          <div class="cite-box" hidden>
+            <pre>@inproceedings{saravanos2021distributed, 
   author={Augustinos D Saravanos AND Alexandros Tsolovikos AND Efstathios Bakolas AND Evangelos Theodorou}, 
   title={{Distributed Covariance Steering with Consensus ADMM for Stochastic Multi-Agent Systems}}, 
   booktitle={Proceedings of Robotics: Science and Systems}, 
@@ -489,8 +509,9 @@
   month={July}, 
   doi={10.15607/RSS.2021.XVII.075} 
 }</pre>   
+          </div>
         </div>
-    </article>
+      </article>
     </section>
 
     <footer>
@@ -498,8 +519,7 @@
     </footer>
   </div>
 
-  <!-- Tiny enhancement: clicking ABSTRACT buttons toggles the next details element -->
-<script>
+  <script>
 document.querySelectorAll('.pub').forEach(pub => {
   const btn = pub.querySelector('.btn[data-role="abstract"]');
   const box = pub.querySelector('.abstract-box');
