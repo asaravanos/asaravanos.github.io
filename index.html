@@ -243,16 +243,17 @@
     <!-- News -->
     <section aria-labelledby="news-title">
       <h2 id="news-title">News</h2>
-      <div class="news">
+      <div class="news">        
+        <div class="news-item"><div class="news-date">Apr 2026</div><div>Our paper <strong><a href="https://arxiv.org/abs/2604.04499" target="_blank">Distributed Covariance Steering via Non-Convex ADMM for Large-Scale Multi-Agent Systems</a></strong> is now available on arXiv.</div></div>
         <div class="news-item"><div class="news-date">Mar 2026</div><div>Excited to give a talk on <strong><a href="https://submissions.mirasmart.com/OptimizationSociety2026/Itinerary/PresentationDetail.aspx?evdid=348" target="_blank">"Deep Learning-Aided Large-Scale Distributed Optimization"</a></strong> on Mar. 20 at the <strong><a href="https://ios2026.isye.gatech.edu/" target="_blank">2026 INFORMS Optimization Society Conference</a></strong> in Atlanta. Feel free to shoot an email if you'd like to chat!</div></div>
         <div class="news-item"><div class="news-date">Jan 2026</div><div>Our paper <strong><a href="https://arxiv.org/pdf/2512.01565" target="_blank">Deep FlexQP: Accelerated Nonlinear Programming via Deep Unfolding</a></strong> is accepted at <strong>ICLR 2026</strong>!</div></div>
         <div class="news-item"><div class="news-date">Dec 2025</div><div>Our paper <strong><a href="https://arxiv.org/pdf/2409.11649" target="_blank">Second-Order Constrained Dynamic Optimization</a></strong> has been accepted at <strong>IJRR</strong>!</div></div>
         <div class="news-item"><div class="news-date">Nov 2025</div><div>Excited to give a guest lecture <strong>"Towards Large-Scale Autonomy: Multi-Agent Planning and Control"</strong> on Nov. 6 at the <a href="https://www.wpi.edu/academics/departments/robotics-engineering" target="_blank">Worcester Polytechnic Institute (WPI) Robotics Engineering Department</a>.</div></div>
         <div class="news-item"><div class="news-date">Oct 2025</div><div>I'll be at the <strong><a href="https://meetings.informs.org/wordpress/annual/" target="_blank">INFORMS Annual Meeting 2025</a></strong> on Oct. 26-29 in Atlanta. Looking forward to seeing the latest developments in optimization and AI for OR! Feel free to shoot an email if you'd like to chat!</div></div>
-        <div class="news-item"><div class="news-date">Oct 2025</div><div>Our paper
+        <!-- <div class="news-item"><div class="news-date">Oct 2025</div><div>Our paper
             <strong><a href="https://arxiv.org/abs/2510.18211" target="_blank">
             Distributed Stochastic Search for Multi-Agent Model Predictive Control</a></strong>
-            is now available on arXiv.</div></div>
+            is now available on arXiv.</div></div> -->
         <div class="news-item"><div class="news-date">Sep 2025</div><div>Our paper <strong><a href="https://arxiv.org/abs/2506.10168" target="_blank">Momentum Multi-Marginal Schrödinger Bridge Matching</a></strong> has been accepted at <strong>NeurIPS 2025</strong>!</div></div>
         <div class="news-item"><div class="news-date">Sep 2025</div><div>Our paper
                     <strong><a href="https://arxiv.org/abs/2508.11799" target="_blank">
@@ -280,6 +281,31 @@
       <div class="pubs-note">* Equal contribution. See <a href="https://scholar.google.com/citations?user=6XP9s1MAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a> for full list of publications.</div>
 
       <article class="pub">
+        <img class="pub-img" src="assets/img/papers/distr_cs_journal.png" alt="Paper visualization" />
+        <div>
+          <h3 class="pub-title">Distributed Covariance Steering via Non-Convex ADMM for Large-Scale Multi-Agent Systems</h3>
+          <p class="pub-authors"><span class="author-me">A.D. Saravanos</span>, I.M. Balci*, A. Taj Abdul*, E. Bakolas, and E.A. Theodorou</p>
+          <p class="pub-venue"><span class="venue-name">IEEE Transactions on Automatic Control (TAC)</span> - Under review, 2026.</p>
+          <div class="btns">
+            <a class="btn" data-role="abstract" href="#">ABSTRACT</a>
+            <a class="btn" href="https://arxiv.org/pdf/2604.04499">PDF</a>
+            <a class="btn" data-role="cite" href="#">CITE</a>
+          </div>
+          <div class="abstract-box" hidden>
+This paper studies the problem of steering large-scale multi-agent stochastic linear systems between Gaussian distributions under probabilistic collision avoidance constraints. We introduce a family of Distributed Covariance Steering (DCS) methods based on the Alternating Direction Method of Multipliers (ADMM), each offering different trade-offs between conservatism and computational efficiency. The first method, Full-Covariance-Consensus (FCC)-DCS, enforces consensus over both the means and covariances of neighboring agents, yielding the least conservative safe solutions. The second approach, Partial-Covariance-Consensus (PCC)-DCS, leverages the insight that safety can be maintained by exchanging only partial covariance information, reducing computational demands. The third method, Mean-Consensus (MC)-DCS, provides the most scalable alternative by requiring consensus only on mean states. Furthermore, we establish novel convergence guarantees for distributed ADMM with iteratively linearized non-convex constraints, covering a broad class of consensus optimization problems. This analysis proves convergence to stationary points for PCC-DCS and MC-DCS, while the convergence of FCC-DCS follows from standard ADMM theory. Simulations in 2D and 3D multi-agent environments verify safety, illustrate the trade-offs between methods, and demonstrate scalability to thousands of agents.          
+</div>  
+  <div class="cite-box" hidden>
+  <pre>@article{saravanos2026distributed,
+  title={Distributed Covariance Steering via Non-Convex ADMM for Large-Scale Multi-Agent Systems},
+  author={Saravanos, Augustinos D and Balci, Isin M and Abdul, Arshiya Taj and Bakolas, Efstathios and Theodorou, Evangelos A},
+  journal={arXiv preprint arXiv:2604.04499},
+  year={2026}
+}</pre>
+          </div>
+        </div>   
+      </article>
+
+      <article class="pub">
         <img class="pub-img" src="assets/img/papers/deep_flex_qp.png" alt="Paper visualization" />
         <div>
           <h3 class="pub-title">Deep FlexQP: Accelerated Nonlinear Programming via Deep Unfolding</h3>
@@ -305,33 +331,7 @@ url={https://openreview.net/forum?id=HL3TvE4Afm}
         </div>   
       </article>
 
-      <article class="pub">
-        <img class="pub-img" src="assets/img/papers/distributed_robust_opt.png" alt="Paper visualization" />
-        <div>
-          <h3 class="pub-title">Scaling Robust Optimization for Swarms: A Distributed Perspective</h3>
-          <p class="pub-authors">A.T. Abdul*, <span class="author-me">A.D. Saravanos*</span> and E.A. Theodorou</p>
-          <p class="pub-venue"><span class="venue-name">IEEE Transactions on Automatic Control (TAC)</span> - Under review, 2026.</p>
-          <div class="btns">
-            <a class="btn" data-role="abstract" href="#">ABSTRACT</a>
-            <a class="btn" href="https://arxiv.org/pdf/2508.11799">PDF</a>
-            <a class="btn" href="https://www.youtube.com/watch?v=Q5xghaqt4SQ">VIDEO</a>
-            <a class="btn" data-role="cite" href="#">CITE</a>
-          </div>
-          <div class="abstract-box" hidden>
-            <p>This article introduces a decentralized robust optimization framework for safe multi-agent control under uncertainty. Although stochastic noise has been the primary form of modeling uncertainty in such systems, these formulations might fall short in addressing uncertainties that are deterministic in nature or simply lack probabilistic data. To ensure safety under such scenarios, we employ the concept of robust constraints that must hold for all possible uncertainty realizations lying inside a bounded set. Nevertheless, standard robust optimization approaches become intractable due to the large number or non-convexity of the constraints involved in safe multi-agent control. To address this, we introduce novel robust reformulations that significantly reduce complexity without compromising safety. The applicability of the framework is further broadened to address both deterministic and stochastic uncertainties by incorporating robust chance constraints and distribution steering techniques. To achieve scalability, we derive a distributed approach based on the Alternating Direction Method of Multipliers (ADMM), supported by a convergence study that accounts for the underlying non-convexity. In addition, computational complexity bounds highlighting the efficiency of the proposed frameworks against standard approaches are presented. Finally, the robustness and scalability of the framework is demonstrated through extensive simulation results across diverse scenarios, including environments with nonconvex obstacles and up to 246 agents.</p>
-          </div>   
-          <div class="cite-box" hidden>
-            <pre>@article{abdul2025scaling,
-  title={Scaling Robust Optimization for Swarms: A Distributed Perspective},
-  author={Abdul, Arshiya Taj and Saravanos, Augustinos D and Theodorou, Evangelos A},
-  journal={arXiv preprint arXiv:2508.11799},
-  year={2025}
-}</pre>
-          </div>
-        </div>
-      </article>
-
-      <article class="pub">
+  <article class="pub">
         <img class="pub-img" src="assets/img/papers/second_order_dyn_opt.png" alt="Paper visualization" />
         <div>
           <h3 class="pub-title">Second-Order Constrained Dynamic Optimization</h3>
@@ -356,6 +356,31 @@ url={https://openreview.net/forum?id=HL3TvE4Afm}
         </div>  
       </article>
 
+      <article class="pub">
+        <img class="pub-img" src="assets/img/papers/distributed_robust_opt.png" alt="Paper visualization" />
+        <div>
+          <h3 class="pub-title">Scaling Robust Optimization for Swarms: A Distributed Perspective</h3>
+          <p class="pub-authors">A.T. Abdul*, <span class="author-me">A.D. Saravanos*</span> and E.A. Theodorou</p>
+          <p class="pub-venue"><span class="venue-name">IEEE Transactions on Automatic Control (TAC)</span> - Under review, 2025.</p>
+          <div class="btns">
+            <a class="btn" data-role="abstract" href="#">ABSTRACT</a>
+            <a class="btn" href="https://arxiv.org/pdf/2508.11799">PDF</a>
+            <a class="btn" href="https://www.youtube.com/watch?v=Q5xghaqt4SQ">VIDEO</a>
+            <a class="btn" data-role="cite" href="#">CITE</a>
+          </div>
+          <div class="abstract-box" hidden>
+            <p>This article introduces a decentralized robust optimization framework for safe multi-agent control under uncertainty. Although stochastic noise has been the primary form of modeling uncertainty in such systems, these formulations might fall short in addressing uncertainties that are deterministic in nature or simply lack probabilistic data. To ensure safety under such scenarios, we employ the concept of robust constraints that must hold for all possible uncertainty realizations lying inside a bounded set. Nevertheless, standard robust optimization approaches become intractable due to the large number or non-convexity of the constraints involved in safe multi-agent control. To address this, we introduce novel robust reformulations that significantly reduce complexity without compromising safety. The applicability of the framework is further broadened to address both deterministic and stochastic uncertainties by incorporating robust chance constraints and distribution steering techniques. To achieve scalability, we derive a distributed approach based on the Alternating Direction Method of Multipliers (ADMM), supported by a convergence study that accounts for the underlying non-convexity. In addition, computational complexity bounds highlighting the efficiency of the proposed frameworks against standard approaches are presented. Finally, the robustness and scalability of the framework is demonstrated through extensive simulation results across diverse scenarios, including environments with nonconvex obstacles and up to 246 agents.</p>
+          </div>   
+          <div class="cite-box" hidden>
+            <pre>@article{abdul2025scaling,
+  title={Scaling Robust Optimization for Swarms: A Distributed Perspective},
+  author={Abdul, Arshiya Taj and Saravanos, Augustinos D and Theodorou, Evangelos A},
+  journal={arXiv preprint arXiv:2508.11799},
+  year={2025}
+}</pre>
+          </div>
+        </div>
+      </article>
 
 
       <article class="pub">
