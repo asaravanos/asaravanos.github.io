@@ -202,7 +202,7 @@
     <nav class="topbar" aria-label="Primary">
       <a class="active" href="#about">Intro</a>
       <a href="#publications">Publications</a>
-      <a href="https://asaravanos.github.io/assets/pdf/Augustinos_CV_Postdoc_Oct25.pdf">CV</a>
+      <a href="https://asaravanos.github.io/assets/pdf/Augustinos_CV_Jul26.pdf">CV</a>
     </nav>
 
     <!-- Hero -->
@@ -220,7 +220,7 @@
                 <a href="https://www.onassis.org/initiatives/scholarships" target="_blank" rel="noopener noreferrer">Onassis Foundation Scholar</a>
                 from 2021 to 2025.
                 I also hold a <strong>M.Sc. in Aerospace Engineering</strong> from <strong>Georgia Tech</strong>, as well as a
-                <strong>Diploma in Electrical and Computer Engineering</strong> (top 1%) from the
+                <strong>Diploma in Electrical and Computer Engineering</strong> from the
                 <strong>University of Patras</strong> in Greece.</p>
           <p>My research bridges <strong>optimization</strong>, <strong>machine learning</strong>, and <strong>control theory</strong>
                 towards developing <span class="emphasize">scalable</span> and <span class="emphasize">robust methods</span>  for
@@ -244,7 +244,7 @@
     <section aria-labelledby="news-title">
       <h2 id="news-title">News</h2>
       <div class="news">
-        <div class="news-item"><div class="news-date">May 2026</div><div>Our paper <strong>Learning-to-Optimize via Deep Unfolded Flows</strong> is accepted at <strong>ICML 2026</strong> as <strong>Spotlight (Top 2%)</strong>!</div></div>        
+        <div class="news-item"><div class="news-date">May 2026</div><div>Our paper <strong><a href="https://openreview.net/forum?id=ZOtOq7hxJP" target="_blank">Learning-to-Optimize via Deep Unfolded Flows</a></strong> is accepted at <strong>ICML 2026</strong> as <strong>Spotlight (Top 2%)</strong>!</div></div>        
         <div class="news-item"><div class="news-date">Apr 2026</div><div>Our paper <strong><a href="https://arxiv.org/abs/2604.04499" target="_blank">Distributed Covariance Steering via Non-Convex ADMM for Large-Scale Multi-Agent Systems</a></strong> is now available on arXiv.</div></div>
         <div class="news-item"><div class="news-date">Mar 2026</div><div>Excited to give a talk on <strong><a href="https://submissions.mirasmart.com/OptimizationSociety2026/Itinerary/PresentationDetail.aspx?evdid=348" target="_blank">"Deep Learning-Aided Large-Scale Distributed Optimization"</a></strong> on Mar. 20 at the <strong><a href="https://ios2026.isye.gatech.edu/" target="_blank">2026 INFORMS Optimization Society Conference</a></strong> in Atlanta. Feel free to shoot an email if you'd like to chat!</div></div>
         <div class="news-item"><div class="news-date">Jan 2026</div><div>Our paper <strong><a href="https://arxiv.org/pdf/2512.01565" target="_blank">Deep FlexQP: Accelerated Nonlinear Programming via Deep Unfolding</a></strong> is accepted at <strong>ICLR 2026</strong>!</div></div>
@@ -280,6 +280,32 @@
     <section id="publications" aria-labelledby="pubs-title">
       <h2 id="pubs-title">Highlighted Publications</h2>
       <div class="pubs-note">* Equal contribution. See <a href="https://scholar.google.com/citations?user=6XP9s1MAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a> for full list of publications.</div>
+
+      <article class="pub">
+        <img class="pub-img" src="assets/img/papers/flow_optimizer.png" alt="Paper visualization" />
+        <div>
+          <h3 class="pub-title">Learning-to-Optimize via Deep Unfolded Flows </h3>
+          <p class="pub-authors"><span class="author-me">A.D. Saravanos</span>, O. So, H.M. Sabbir Ahmad, and C. Fan</p>
+          <p class="pub-venue"><span class="venue-name">International Conference on Machine Learning (ICML)</span>, 2026 - Spotlight (top 2%).</p>
+          <div class="btns">
+            <a class="btn" data-role="abstract" href="#">ABSTRACT</a>
+            <a class="btn" href="https://openreview.net/forum?id=ZOtOq7hxJP">PDF</a>
+            <a class="btn" data-role="cite" href="#">CITE</a>
+          </div>
+          <div class="abstract-box" hidden>
+We introduce FlowOptimizer, a deep unfolded, flow-based framework for learned iterative optimization. Motivated by the expressiveness of flow models, we represent each optimization iteration via a velocity field that operates on a population of candidate solutions, i.e., a set of parallel iterates, conditioned on contextual information including their objective values and gradients, as well as population-level statistics. The velocity field is initially trained in a simulation-free manner by matching displacements from source populations to improved target ones obtained through sampling the objective. Subsequently, we unfold this velocity field as the internal iteration of an optimization sequence, and fine-tune it in an end-to-end manner by directly optimizing objective values over a targeted class of problems. Notably, FlowOptimizer is a self-supervised framework whose training relies solely on objective evaluations without requiring knowledge of solutions. We evaluate our approach on a series of tasks from standard non-convex optimization benchmarks to real-world problems from supply chain, robotics and power grid applications. FlowOptimizer consistently outperforms well-established sampling-based/gradient-based traditional optimization and learning-to-optimize methods, often by orders of magnitude in terms of solution quality. We further highlight its ability to be trained on low-dimensional problems and successfully generalize to substantially higher-dimensional ones.</div>  
+  <div class="cite-box" hidden>
+  <pre>@inproceedings{
+saravanos2026learningtooptimize,
+title={Learning-to-Optimize via Deep Unfolded Flows},
+author={Augustinos D Saravanos and Oswin So and H M Sabbir Ahmad and Chuchu Fan},
+booktitle={Forty-third International Conference on Machine Learning},
+year={2026},
+url={https://openreview.net/forum?id=ZOtOq7hxJP}
+}</pre>
+          </div>
+        </div>   
+      </article>
 
       <article class="pub">
         <img class="pub-img" src="assets/img/papers/distr_cs_journal.png" alt="Paper visualization" />
