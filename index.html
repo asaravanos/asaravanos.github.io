@@ -49,7 +49,19 @@
     .topbar a.active { color: var(--text); font-weight: 700; }
 
     /* Hero */
-    .hero { display: grid; grid-template-columns: 1.5fr 1fr; gap: 28px; align-items: start; }
+    .hero {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      grid-template-rows: auto 1fr;
+      grid-template-areas:
+        "head photo"
+        "lead photo";
+      gap: 0 28px;
+      align-items: start;
+    }
+    .hero-head  { grid-area: head; }
+    .hero-lead  { grid-area: lead; }
+    .hero-photo { grid-area: photo; display: flex; justify-content: center; margin-top: 150px; }
     .title { font-size: 40px; color: var(--text); font-weight: 600; margin-bottom: 2px;   /* ↓ Tightens spacing below name */}
     .subtitle { font-size: 27px; color: var(--text); margin-top: 4px; font-weight: 400; }
     .portrait { width: 75%; max-width: 320px; border-radius: 10px; border: 1px solid var(--border); box-shadow: 0 6px 24px rgba(0,0,0,.35); object-fit: cover; }
@@ -111,17 +123,22 @@
     footer { margin-top: 40px; color: var(--muted); font-size: 14px; border-top: 1px solid var(--border); padding-top: 18px; }
 
     /* Responsive */
-    .hero > div:last-child {
-      margin-top: 150px;
-    }
     @media (max-width: 860px) {
-      .hero { grid-template-columns: 1fr; }
+      .hero {
+        grid-template-columns: auto 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+          "photo head"
+          "lead  lead";
+        gap: 0 16px;
+        align-items: center;
+      }
+      .hero-photo { margin-top: 0; }
+      .portrait { width: 104px; max-width: 104px; height: 104px; box-shadow: 0 4px 14px rgba(0,0,0,.25); }
+      .title { font-size: 26px; line-height: 1.15; }
+      .subtitle { font-size: 18px; }
       .topbar { justify-content: center; }
       .news-item { grid-template-columns: 100px 1fr; }
-      .portrait { max-width: 220px; }
-      .hero > div:last-child {
-        margin-top: 0;
-      }
       .pub {
         grid-template-columns: 1fr;
       }
@@ -207,10 +224,11 @@
 
     <!-- Hero -->
     <header id="about" class="hero" role="banner">
-      <div>
+      <div class="hero-head">
         <h1 class="title">Augustinos Saravanos</h1>
         <div class="subtitle">Postdoc at MIT</div>
-        <div class="lead" style="margin-top:14px;">
+      </div>
+      <div class="lead hero-lead" style="margin-top:14px;">
           <p>Hi, I'm a <span class="emphasize">postdoctoral researcher</span> at <span class="emphasize">MIT AeroAstro</span> and <span class="emphasize">LIDS</span>, working with
                 <a href="https://chuchu.mit.edu/" target="_blank" rel="noopener noreferrer">Chuchu Fan</a>.
               I received my <strong>PhD in Machine Learning</strong> at <strong>Georgia Tech</strong> in 2025, where I was advised by
@@ -234,9 +252,8 @@
           <p>Follow:&nbsp&nbsp&nbsp<a href="https://scholar.google.com/citations?user=6XP9s1MAAAAJ&hl=en" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-google-scholar"></i> Google Scholar</a>
             <a href="https://www.linkedin.com/in/augustine-saravanos/" target="_blank" rel="noopener noreferrer" style="margin-left: 16px;"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
           </p>
-        </div>
       </div>
-      <div style="display:flex; justify-content:center;">
+      <div class="hero-photo">
         <img class="portrait" src="assets/img/prof_pic.jpg" alt="Portrait of Augustinos Saravanos" />
       </div>
     </header>
