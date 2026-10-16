@@ -309,6 +309,21 @@
       <div class="pubs-note">* Equal contribution. See <a href="https://scholar.google.com/citations?user=6XP9s1MAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a> for full list of publications.</div>
 
       <article class="pub">
+        <!-- TODO: add PDF/Cite once available -->
+        <img class="pub-img" src="assets/img/papers/flowoptpolicy.png" alt="Paper visualization" />
+        <div>
+          <h3 class="pub-title">Learning to Optimize Actions with Flows</h3>
+          <p class="pub-authors"><span class="author-me">A.D. Saravanos</span>, O. So, and C. Fan</p>
+          <p class="pub-venue"><span class="venue-name">International Conference on Learning Representations (ICLR)</span>, 2027 - Submitted.</p>
+          <div class="btns">
+            <a class="btn" data-role="abstract" href="#">Abstract</a>
+          </div>
+          <div class="abstract-box" hidden>
+Model-based planning requires repeatedly solving complex non-convex optimization problems over sequences of actions. These problems are predominantly tackled by sampling-based optimizers, whose hand-crafted update rules cannot exploit structure patterns across planning instances. From a complementary perspective, generative modeling has enabled expressive policies that directly generate action sequences, yet without optimizing them over a horizon through a predictive model. We bridge these two paradigms by introducing <strong>FlowOpt Policy</strong>, which casts planning as a learned transport problem over action sequences: rather than generating actions directly, a flow iteratively transports a population of candidate action sequences toward lower cost, conditioned on their rollout evaluations. The flow is parameterized by an attention mechanism in which every candidate attends over the evaluated population, so that its update depends jointly on where the other candidates lie and how they scored. We further reveal connections to classical methods such as MPPI and CEM, whose updates emerge as particular fixed attention patterns. FlowOpt Policy is trained in a self-supervised manner via flow matching on improvement steps computed by a sampling-based optimizer on the populations the planner encounters, without requiring any demonstration data. Experiments on classical robotics and world model planning tasks show that FlowOpt Policy consistently outperforms sampling-based planners at equal rollout budget, and is more robust than state-conditioned generative policies, generalizing better to unseen objectives because it learns how to optimize rather than what to output.</div>
+        </div>
+      </article>
+
+      <article class="pub">
         <img class="pub-img" src="assets/img/papers/flow_optimizer.png" alt="Paper visualization" />
         <div>
           <h3 class="pub-title">Learning-to-Optimize via Deep Unfolded Flows</h3>
