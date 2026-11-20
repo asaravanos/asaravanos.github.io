@@ -20,6 +20,8 @@
     --muted: #8a8a8a;      /* secondary text */
     --accent: #0576c1;     /* link color – ChatGPT blue tone */
     --accent-weak: #cde3ff;
+    --mit-red: #a31f34;      /* MIT red – emphasis, venues, accents */
+    --mit-burgundy: #750014; /* MIT burgundy – top bar, active nav, job-market box */
     --card: #ffffff;
     --border: #e2e2e2;
     --btn-bg: #f2f3f5;
@@ -38,33 +40,29 @@
       line-height: 1.65;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
+      border-top: 5px solid var(--mit-burgundy);
     }
+    ::selection { background: var(--mit-red); color: #fff; }
     a { color: var(--accent); text-decoration: none; }
     a:hover { text-decoration: underline; }
-    .wrap { max-width: var(--maxw); margin: 0 auto; padding: 28px 20px 96px; }
+    .wrap { max-width: var(--maxw); margin: 0 auto; padding: 16px 20px 96px; }
 
     /* Top nav */
-    .topbar { display: flex; align-items: center; justify-content: flex-end; gap: 18px; padding: 8px 0 20px; }
+    .topbar { display: flex; align-items: center; justify-content: flex-end; gap: 18px; padding: 6px 0 10px; }
     .topbar a { color: var(--muted); font-weight: 500; }
-    .topbar a.active { color: var(--text); font-weight: 700; }
+    .topbar a.active { color: var(--mit-burgundy); font-weight: 700; border-bottom: 2px solid var(--mit-red); padding-bottom: 2px; }
+    .topbar a:hover { color: var(--mit-red); text-decoration: none; }
 
     /* Hero */
-    .hero {
-      display: grid;
-      grid-template-columns: 1.5fr 1fr;
-      grid-template-rows: auto 1fr;
-      grid-template-areas:
-        "head photo"
-        "lead photo";
-      gap: 0 28px;
-      align-items: start;
-    }
+    /* Desktop: photo floats right and the text wraps around it (like LaTeX wrapfigure) */
+    .hero { display: flow-root; }
     .hero-head  { grid-area: head; }
     .hero-lead  { grid-area: lead; }
-    .hero-photo { grid-area: photo; display: flex; justify-content: center; margin-top: 150px; }
-    .title { font-size: 40px; color: var(--text); font-weight: 600; margin-bottom: 2px;   /* ↓ Tightens spacing below name */}
+    .hero-photo { grid-area: photo; float: right; width: 280px; margin: 18px 0 20px 36px; }
+    .hero .notice { display: flow-root; } /* keep the box beside the photo instead of under it */
+    .title { font-size: 40px; color: var(--text); font-weight: 600; margin-top: 10px; margin-bottom: 2px;   /* ↓ Tightens spacing below name */}
     .subtitle { font-size: 27px; color: var(--text); margin-top: 4px; font-weight: 400; }
-    .portrait { width: 75%; max-width: 320px; border-radius: 10px; border: 1px solid var(--border); box-shadow: 0 6px 24px rgba(0,0,0,.35); object-fit: cover; }
+    .portrait { display: block; width: 100%; max-width: 320px; border-radius: 10px; border: 1px solid var(--border); box-shadow: 0 6px 24px rgba(0,0,0,.35); object-fit: cover; }
     .lead p { margin: 0 0 12px; }
 
     hr.sep { border: none; border-top: 1px solid var(--border); margin: 28px 0; }
@@ -72,6 +70,7 @@
     /* Sections */
     section { margin-top: 26px; }
     h2 { font-size: clamp(20px, 2.6vw, 28px); margin: 0 0 12px; letter-spacing: -0.01em; }
+    h2::after { content: ""; display: block; width: 44px; height: 3px; margin-top: 6px; background: var(--mit-red); border-radius: 2px; }
 
     /* News list */
     .news { display: grid; gap: 5px; }
@@ -103,7 +102,7 @@
         margin: 0 0 10px;
       }
       .venue-name {
-        color: #ab2706;
+        color: var(--mit-red);
         font-weight: 650;
       }
       .author-me {
@@ -129,6 +128,7 @@
     /* Responsive */
     @media (max-width: 860px) {
       .hero {
+        display: grid;
         grid-template-columns: auto 1fr;
         grid-template-rows: auto auto;
         grid-template-areas:
@@ -137,7 +137,7 @@
         gap: 0 16px;
         align-items: center;
       }
-      .hero-photo { margin-top: 0; }
+      .hero-photo { float: none; width: auto; margin: 0; }
       .portrait { width: 104px; max-width: 104px; height: 104px; box-shadow: 0 4px 14px rgba(0,0,0,.25); }
       .title { font-size: 26px; line-height: 1.15; }
       .subtitle { font-size: 18px; }
@@ -200,19 +200,36 @@
     }
 
     .notice {
-    background: #fdfcf3; /* very light yellow */
-    border: 1px solid #ece4c4;
+    background: rgba(117, 0, 20, 0.8);   /* burgundy, slightly softened */
+    border: 1px solid transparent;
     border-radius: 10px;
     padding: 10px 14px;
     margin: 16px 0;
-    color: var(--text);
+    color: #fff;
     font-weight: 600;
     text-align: center;
   }
 
+  /* Research-question pull quote */
+  .question {
+      display: flow-root;   /* stay beside the floated photo instead of running under it */
+      margin: 18px 0;
+      padding: 12px 18px;
+      border-left: 4px solid var(--mit-red);
+      border-radius: 0 10px 10px 0;
+      background: #faf3f4;  /* faint MIT-red tint */
+      font-weight: 600;
+      line-height: 1.45;
+      color: var(--text);
+    }
+
+  .question.vision { font-weight: 400; text-align: justify; }
+
+  .mit-text { color: var(--mit-red); font-style: italic; }  /* MIT red, italic, normal weight */
+
   .emphasize {
       font-weight: 700;
-      color: #ab2706;
+      color: var(--mit-red);
     }
 
   </style>
@@ -232,8 +249,11 @@
         <h1 class="title">Augustinos Saravanos</h1>
         <div class="subtitle">Postdoc at MIT</div>
       </div>
+      <div class="hero-photo">
+        <img class="portrait" src="assets/img/prof_pic.jpg" alt="Portrait of Augustinos Saravanos" />
+      </div>
       <div class="lead hero-lead" style="margin-top:14px;">
-          <p>Hi, I'm a <span class="emphasize">postdoctoral researcher</span> at <span class="emphasize">MIT AeroAstro</span> and <span class="emphasize">LIDS</span>, working with
+          <p>Hi, I'm a <span class="emphasize">postdoctoral researcher</span> at <span class="emphasize">MIT LIDS</span> and <span class="emphasize">AeroAstro</span>, working with
                 <a href="https://chuchu.mit.edu/" target="_blank" rel="noopener noreferrer">Chuchu Fan</a>.
               I received my <strong>PhD in Machine Learning</strong> at <strong>Georgia Tech</strong> in 2025, where I was advised by
                 <a href="https://scholar.google.com/citations?hl=en&user=dG9MV7oAAAAJ" target="_blank" rel="noopener noreferrer">Evangelos Theodorou</a>.
@@ -243,10 +263,19 @@
                 I also hold a <strong>M.Sc. in Aerospace Engineering</strong> from <strong>Georgia Tech</strong>, as well as a
                 <strong>Diploma in Electrical and Computer Engineering</strong> from the
                 <strong>University of Patras</strong> in Greece.</p>
+          <blockquote class="question">How can we make complex decisions efficiently, reliably, and at scale?</blockquote>
+          <p>My research focuses on developing algorithms and computational tools at the <strong>intersection</strong> of <span class="emphasize">optimization</span> and <span class="emphasize">artificial intelligence</span> to address this question.</p>
+          <p>From an <strong>algorithmic</strong> and <strong>computational</strong> perspective, I am especially interested in:
+                (1) <span class="mit-text">blending structured optimization algorithms with trainable modules</span> within convex optimization, model predictive control, large-scale distributed optimization, etc.;
+                and (2) <span class="mit-text">revealing or imposing optimization principles in modern AI models</span>, such as generative models and attention-based architectures.</p>
+          <p>From an <strong>applications</strong> standpoint, my work is motivated by challenges in <span class="mit-text">large-scale autonomy and robotics</span>, with broader applications to <span class="mit-text">networked systems, transportation, and resource allocation</span>.</p>
+          <blockquote class="question vision">My long-term vision is that the <strong>most effective approaches to complex decision-making</strong> will emerge from algorithms that combine the <strong>mathematical foundations of optimization</strong> with the <strong>expressive power of modern AI architectures</strong>.</blockquote>
+          <!--
           <p>My research bridges <strong>optimization</strong>, <strong>machine learning</strong>, and <strong>control theory</strong>
                 towards developing <span class="emphasize">scalable</span> and <span class="emphasize">robust methods</span>  for
                 <span class="emphasize">large-scale decision-making</span> systems in <strong>autonomy</strong>, <strong>robotics</strong>, <strong>transportation</strong>, <strong>resource allocation</strong>, and other
                 application areas.</p>
+          -->
 
           <div class="notice">
           🎓 I am on the academic job market for fall 2027.
@@ -256,9 +285,6 @@
           <p>Follow:&nbsp&nbsp&nbsp<a href="https://scholar.google.com/citations?user=6XP9s1MAAAAJ&hl=en" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-google-scholar"></i> Google Scholar</a>
             <a href="https://www.linkedin.com/in/augustine-saravanos/" target="_blank" rel="noopener noreferrer" style="margin-left: 16px;"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
           </p>
-      </div>
-      <div class="hero-photo">
-        <img class="portrait" src="assets/img/prof_pic.jpg" alt="Portrait of Augustinos Saravanos" />
       </div>
     </header>
 
