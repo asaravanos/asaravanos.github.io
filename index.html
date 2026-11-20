@@ -18,7 +18,7 @@
     --elev-1: #ffffff;     /* card backgrounds – true white */
     --text: #1e1f22;       /* main text – near-black */
     --muted: #8a8a8a;      /* secondary text */
-    --accent: #0576c1;     /* link color – ChatGPT blue tone */
+    --accent: #1d4f91;     /* link color – deep navy blue, distinct from the red accents (was #0576c1) */
     --accent-weak: #cde3ff;
     --mit-red: #a31f34;      /* MIT red – emphasis, venues, accents */
     --mit-burgundy: #750014; /* MIT burgundy – top bar, active nav, job-market box */
@@ -210,13 +210,12 @@
     text-align: center;
   }
 
-  /* Research-question pull quote */
+  /* Highlight boxes: research question and vision */
   .question {
       display: flow-root;   /* stay beside the floated photo instead of running under it */
       margin: 18px 0;
       padding: 12px 18px;
-      border-left: 4px solid var(--mit-red);
-      border-radius: 0 10px 10px 0;
+      border-radius: 10px;   /* plain tinted box – no left bar, which reads as a quotation */
       background: #faf3f4;  /* faint MIT-red tint */
       font-weight: 600;
       line-height: 1.45;
@@ -264,13 +263,13 @@
                 I also hold a <strong>M.Sc. in Aerospace Engineering</strong> from <strong>Georgia Tech</strong>, as well as a
                 <strong>Diploma in Electrical and Computer Engineering</strong> from the
                 <strong>University of Patras</strong> in Greece.</p>
-          <blockquote class="question">How can we make complex decisions efficiently, reliably, and at scale?</blockquote>
+          <div class="question">How can we make complex decisions efficiently, reliably, and at scale?</div>
           <p>My research focuses on developing algorithms and computational tools at the <strong>intersection</strong> of <span class="emphasize">optimization</span> and <span class="emphasize">artificial intelligence</span> to address this question.</p>
           <p>From an <strong>algorithmic</strong> and <strong>computational</strong> perspective, I am especially interested in:
                 (1) <span class="mit-text">blending structured optimization algorithms with trainable modules</span> within convex optimization, model predictive control, large-scale distributed optimization, etc.;
                 and (2) <span class="mit-text">revealing or imposing optimization principles in modern AI models</span>, such as generative models and attention-based architectures.</p>
           <p>From an <strong>applications</strong> standpoint, my work is motivated by challenges in <span class="mit-text">large-scale autonomy and robotics</span>, with broader applications to <span class="mit-text">networked systems, transportation, and resource allocation</span>.</p>
-          <blockquote class="question vision">My long-term vision is that the <strong>most effective approaches to complex decision-making</strong> will emerge from algorithms that combine the <strong>mathematical foundations of optimization</strong> with the <strong>expressive power of modern AI architectures</strong>.</blockquote>
+          <div class="question vision">My long-term vision is that the <strong>most effective approaches to complex decision-making</strong> will emerge from algorithms that combine the <strong>mathematical foundations of optimization</strong> with the <strong>expressivity of modern AI architectures</strong>.</div>
           <!--
           <p>My research bridges <strong>optimization</strong>, <strong>machine learning</strong>, and <strong>control theory</strong>
                 towards developing <span class="emphasize">scalable</span> and <span class="emphasize">robust methods</span>  for
