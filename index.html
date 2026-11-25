@@ -345,7 +345,48 @@
             <a class="btn" data-role="abstract" href="#">Abstract</a>
           </div>
           <div class="abstract-box" hidden>
-Model-based planning requires repeatedly solving complex non-convex optimization problems over sequences of actions. These problems are predominantly tackled by sampling-based optimizers, whose hand-crafted update rules cannot exploit structure patterns across planning instances. From a complementary perspective, generative modeling has enabled expressive policies that directly generate action sequences, yet without optimizing them over a horizon through a predictive model. We bridge these two paradigms by introducing <strong>FlowOpt Policy</strong>, which casts planning as a learned transport problem over action sequences: rather than generating actions directly, a flow iteratively transports a population of candidate action sequences toward lower cost, conditioned on their rollout evaluations. The flow is parameterized by an attention mechanism in which every candidate attends over the evaluated population, so that its update depends jointly on where the other candidates lie and how they scored. We further reveal connections to classical methods such as MPPI and CEM, whose updates emerge as particular fixed attention patterns. FlowOpt Policy is trained in a self-supervised manner via flow matching on improvement steps computed by a sampling-based optimizer on the populations the planner encounters, without requiring any demonstration data. Experiments on classical robotics and world model planning tasks show that FlowOpt Policy consistently outperforms sampling-based planners at equal rollout budget, and is more robust than state-conditioned generative policies, generalizing better to unseen objectives because it learns how to optimize rather than what to output.</div>
+Model-based planning requires repeatedly solving complex non-convex optimization problems over action sequences. Sampling-based optimizers are most commonly used, yet their handcrafted updates cannot exploit structure shared across planning instances. From a complementary perspective, expressive generative policies produce action sequences directly without optimizing them over the planning horizon using a predictive model. We bridge these two paradigms by introducing <strong>FlowOpt Policy</strong>, which casts the optimization of action sequences as a learned transport problem. Rather than reweighting candidates and resampling from a proposal, or generating actions directly, a learned flow iteratively transports the candidate population based on its rollout evaluations. Our framework is theoretically grounded in a splitting of the Wasserstein gradient flow of a free energy over action populations. The resulting proximal step defines flow-matching targets using candidates obtained by a higher-budget optimizer from the populations FlowOpt Policy encounters, enabling self-supervised training without demonstration data. The same formulation also motivates attention over the population, allowing each candidate's update to depend on the others' locations and rollout costs. We further show that classical methods such as MPPI and CEM emerge as special cases of this mechanism. Across physics-based and learned world-model tasks, FlowOpt Policy outperforms both handcrafted and learned sampling-based planners, and generalizes better than state-conditioned generative policies to unseen objectives, as it learns how to optimize rather than what to output.
+        </div>
+        </div>
+      </article>
+
+      <article class="pub">
+        <!-- TODO: add PDF/Cite once available -->
+        <img class="pub-img" src="assets/img/papers/prob_measure_gradient_flows.png" alt="Paper visualization" />
+        <div>
+          <h3 class="pub-title">Probability Measure Gradient Flows for Diffusion-Based Amortized Optimization</h3>
+          <p class="pub-authors">T. Chen, <span class="author-me">A.D. Saravanos</span>, C. Fan and K. Wang</p>
+          <p class="pub-venue"><span class="venue-name">International Conference on Learning Representations (ICLR)</span>, 2027 - Submitted.</p>
+          <div class="btns">
+            <a class="btn" data-role="abstract" href="#">Abstract</a>
+          </div>
+          <div class="abstract-box" hidden>
+Nonconvex optimization problems are ubiquitous but can be computationally expensive to solve repeatedly. Recent work on amortized optimization accelerates repeated optimization by learning a mapping from problem parameters to their solutions. However, existing methods typically learn a deterministic solution mapping, limiting their ability to represent and explore multiple promising regions of a nonconvex solution landscape. In this work, we introduce <strong>DiFlowOpt</strong>, a self-supervised amortized optimization method that models solutions as a distribution parameterized by a diffusion model. We lift amortized optimization to the space of probability measures and study its optimization dynamics under Wasserstein and Fisher–Rao gradient flows. We show that these two geometries induce complementary gradient estimators for training diffusion-based amortized optimizers, leveraging first- and zeroth-order objective information, respectively. Motivated by this connection, DiFlowOpt updates the diffusion model along a Wasserstein–Fisher–Rao flow that combines both sources of information. To accommodate constraints, we further develop a primal-dual formulation in which instance-specific dual variables are learned by a neural network. Across three standard high-dimensional nonconvex optimization problems and two real-world applications, DiFlowOpt achieves better solution quality than classical solvers and existing amortized optimization methods, with substantially lower solve time than classical solvers.
+          </div>
+        </div>
+      </article>
+
+      <article class="pub">
+        <img class="pub-img" src="assets/img/papers/sampling_at_scale.png" alt="Paper visualization" />
+        <div>
+          <h3 class="pub-title">Sampling at Scale: Distributed Multi-Agent Trajectory Optimization</h3>
+          <p class="pub-authors">M. Jung, D.S. Georgiou, <span class="author-me">A.D. Saravanos</span> and E.A. Theodorou</p>
+          <p class="pub-venue"><span class="venue-name">IEEE International Conference on Robotics and Automation (ICRA)</span>, 2027 - Submitted.</p>
+          <div class="btns">
+            <a class="btn" data-role="abstract" href="#">Abstract</a>
+            <a class="btn" href="https://arxiv.org/pdf/2611.31561">PDF</a>
+            <a class="btn" data-role="cite" href="#">Cite</a>
+          </div>
+          <div class="abstract-box" hidden>
+Multi-agent trajectory optimization poses two coupled challenges: effectively exploring non-convex landscapes and scaling favorably to large teams of agents. Sampling-based methods are natural candidates for the exploration challenge but scale poorly with problem dimension. Moreover, their off-the-shelf integration into distributed optimization introduces a fundamental trade-off: sampling either fails to address the constraint-induced non-convexity or its search space grows with neighborhood size. We address this gap by introducing a <u>D</u>istributed <u>S</u>ampling-based <u>T</u>rajectory <u>O</u>ptimization (DS-TO) architecture built on a splitting mechanism tailored to sampling. Under this splitting, each agent samples only in its own control space, independent of neighborhood size, while still remaining exposed to both the constraint-induced non-convexity and the decisions of other agents. The resulting algorithm is fully decentralized, requiring only neighborhood communication, with all local updates executed in parallel across agents. Efficient variations, including parallel Jacobi updates within each agent's subproblem and single-step constraint linearization, further reduce computation. Experiments on 2D and 3D tasks with up to 1024 agents demonstrate improved exploration and constraint satisfaction over state-of-the-art derivative-based distributed optimization, and superior scalability to existing distributed sampling methods.</div>
+  <div class="cite-box" hidden>
+  <pre>@article{jung2026sampling,
+  title={Sampling at Scale: Distributed Multi-Agent Trajectory Optimization},
+  author={Jung, Minchan and Georgiou, Dimitrios S and Saravanos, Augustinos D and Theodorou, Evangelos A},
+  journal={arXiv preprint arXiv:2611.31561},
+  year={2026}
+}</pre>
+          </div>
         </div>
       </article>
 
